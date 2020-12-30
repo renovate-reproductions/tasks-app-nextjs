@@ -878,7 +878,7 @@ chalk@4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chokidar@3.4.3, chokidar@^3.4.1:
+chokidar@3.4.3, chokidar@^3.4.1, chokidar@^3.4.3:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.3.tgz#c1df38231448e45ca4ac588e6c79573ba6a57d5b"
   integrity sha512-DtM3g7juCXQxFVSNPNByEC2+NImtBuxQQvWlHunpJIS5Ocr0lG306cC7FCi7cEA0fzmybPUIl4txBIobk1gGOQ==
@@ -3073,6 +3073,14 @@ path-type@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
+
+pathpida@^0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/pathpida/-/pathpida-0.10.2.tgz#1b876c32e87005aec9b0e2d42f57d22ff3a4542a"
+  integrity sha512-TZSqmWdpxFIfu+n83RNO5/JwIa6OkfPWAjBeDyK8ncDq/PqGTKlV9RN+82RmisTMrguu+EKOeLxMWuPacVw9Ng==
+  dependencies:
+    chokidar "^3.4.3"
+    minimist "^1.2.5"
 
 pbkdf2@^3.0.3:
   version "3.1.1"
