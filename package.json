@@ -25,6 +25,7 @@
     "next": "^10.0.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-is": "^17.0.1",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
@@ -33,6 +34,7 @@
     "@types/prettier": "^2.1.6",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/react-is": "^17.0.0",
     "@types/styled-components": "^5.1.7",
     "@types/stylelint": "^9.10.1",
     "@typescript-eslint/eslint-plugin": "^4.11.1",
