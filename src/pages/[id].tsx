@@ -1,7 +1,1 @@
-
-
-export default function Index() {
-    return <div>index
-      detail
-    </div>;
-}
+export default () => <div>index detail</div>
