@@ -9,8 +9,6 @@
     "dev": "run-p dev:*",
     "dev:next": "next dev",
     "dev:path": "pathpida --enableStatic --watch",
-    "doc:build": "npx redoc-cli bundle ./api.yml -o ./doc/index.html --options.expandResponses=all",
-    "doc:watch": "npx redoc-cli serve ./api.yml --watch --options.expandResponses=all",
     "fmt": "run-p fmt:**",
     "fmt:eslint": "eslint '**/*.{js,jsx,ts,tsx}' --fix --cache",
     "fmt:json": "prettier --write '**/*.json'",

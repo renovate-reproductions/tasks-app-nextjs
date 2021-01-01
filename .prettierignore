@@ -1,5 +1,4 @@
 /.next
 /coverage
-/doc
 *.d.ts
 !.*rc.js
