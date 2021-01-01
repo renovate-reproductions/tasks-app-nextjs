@@ -23,9 +23,9 @@ export const View: React.VFC<Props> = (props) => {
         onChange={props.handleChangeDone}
       />
       <Styled.Label htmlFor={id}>{props.title}</Styled.Label>
-      <button type="button" onClick={props.handleClickDelete}>
+      <Styled.Button type="button" onClick={props.handleClickDelete}>
         Delete
-      </button>
+      </Styled.Button>
     </Styled.LI>
   )
 }

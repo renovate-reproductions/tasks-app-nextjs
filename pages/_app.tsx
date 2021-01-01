@@ -1,1 +1,1 @@
-export { MyApp as default } from '../src/infrastructure/pages/_app'
+export { MyApp as default } from '../src/infrastructure/controllers/_app'

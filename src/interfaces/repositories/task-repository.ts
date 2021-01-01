@@ -1,7 +1,7 @@
+import { errorMap } from '../../../lib/error'
+import { isAxiosError } from '../../../lib/type'
 import { TaskRepositoryInterface } from '../../application/repository-interface/task-repository-interface'
 import { TaskModel } from '../../domain/models/task-model'
-import { errorMap } from '../../lib/error'
-import { isAxiosError } from '../../lib/type'
 import { API } from '../api'
 
 type TaskRecord = {

@@ -1,1 +1,1 @@
-export { Index as default } from '../src/interfaces/controllers'
+export { Index as default } from '../src/infrastructure/controllers'

@@ -32,3 +32,7 @@ export const Input = styled.input`
     text-decoration: line-through;
   }
 `
+
+export const Button = styled.button`
+  height: 32px;
+`

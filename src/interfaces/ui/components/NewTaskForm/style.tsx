@@ -16,10 +16,11 @@ export const Form = styled.form`
 `
 
 export const Input = styled.input`
-  height: 24px;
+  box-sizing: border-box;
+  height: 32px;
   padding: 0 8px;
 `
 
 export const Button = styled.button`
-  height: 24px;
+  height: 32px;
 `
