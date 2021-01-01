@@ -1,4 +1,5 @@
 /node_modules
 /.next
+/doc
 *.d.ts
 !.*rc.js
