@@ -37,9 +37,10 @@ export class MyDocument extends Document {
   // eslint-disable-next-line class-methods-use-this
   render() {
     return (
-      <Html>
+      <Html lang="en-US">
         <Head>
           <title>Tasks</title>
+          <meta name="Description" content="Tasks" />
         </Head>
         <body>
           <Main />

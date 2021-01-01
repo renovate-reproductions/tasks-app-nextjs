@@ -22,6 +22,7 @@ export const View: React.VFC<Props> = (props) => (
       autoFocus={true}
       onChange={props.handleChangeText}
       placeholder="Add task"
+      aria-label="New task"
     />
     <Styled.Button type="submit">Add</Styled.Button>
   </Styled.Form>
