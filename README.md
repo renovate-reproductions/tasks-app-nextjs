@@ -22,7 +22,6 @@
   - [EditorConfig](https://editorconfig.org/)
 - Linter
   - [ESLint - Pluggable JavaScript linter](https://eslint.org/)
-    - @todo
   - [A mighty, modern style linter · stylelint](https://stylelint.io/)
 - Git
   - [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/)
