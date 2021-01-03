@@ -15,7 +15,7 @@ export const View: React.VFC<Props> = (props) => {
   const id = `item_${props.id}`
 
   return (
-    <Styled.LI key={props.id}>
+    <Styled.LI>
       <Styled.Input
         type="checkbox"
         id={id}
