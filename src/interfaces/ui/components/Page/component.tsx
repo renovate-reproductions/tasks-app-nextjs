@@ -10,9 +10,9 @@ export const View: React.VFC<Props> = () => (
   <Styled.Main>
     <h1>Tasks</h1>
     <NewTaskForm />
-    <Styled.UListWrapper>
+    <Styled.DivUListWrapper>
       <TaskUList />
-    </Styled.UListWrapper>
+    </Styled.DivUListWrapper>
   </Styled.Main>
 )
 

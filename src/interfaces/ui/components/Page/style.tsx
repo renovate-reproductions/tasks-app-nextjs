@@ -4,6 +4,6 @@ export const Main = styled.main`
   padding: 8px 32px;
 `
 
-export const UListWrapper = styled.main`
+export const DivUListWrapper = styled.div`
   padding-top: 16px;
 `
