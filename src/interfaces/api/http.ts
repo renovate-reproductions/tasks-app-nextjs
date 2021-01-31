@@ -6,17 +6,17 @@ const DOMAIN = process.env.DOMAIN ?? 'https://tasks-api-express.herokuapp.com'
 const paramsSerializer = (params: Record<string, Primitive | Primitive[]>) => {
   const searchParams = new URLSearchParams()
 
-  Object.entries(params).forEach(([key, value]) => {
+  for (const [key, value] of Object.entries(params)) {
     // array format: repeat
     if (Array.isArray(value)) {
-      value.forEach((value_) => {
+      for (const value_ of value) {
         searchParams.append(key, String(value_))
-      })
-      return
+      }
+      continue
     }
 
     searchParams.append(key, String(value))
-  })
+  }
 
   return searchParams.toString()
 }
