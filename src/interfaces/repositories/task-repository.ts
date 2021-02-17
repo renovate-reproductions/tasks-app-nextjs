@@ -48,7 +48,7 @@ const switchError = (error: Error): Error => {
 export class TaskRepository implements TaskRepositoryInterface {
   private readonly api: API
 
-  constructor(api: API) {
+  public constructor(api: API) {
     this.api = api
   }
 
