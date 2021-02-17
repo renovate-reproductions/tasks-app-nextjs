@@ -1,14 +1,14 @@
-import { ChangeEvent } from 'react'
+import type { ChangeEvent } from 'react'
 
-import { TaskModel } from '../../../../domain/models/task-model'
+import type { TaskModel } from '../../../../domain/models/task-model'
 import { useChangeDoneHandler, useClickDeleteHandler } from './hook'
 import * as Styled from './style'
 
 type ContainerProps = TaskModel
 
 type Props = {
-  handleChangeDone: (e: ChangeEvent<HTMLInputElement>) => void
-  handleClickDelete: () => void
+  handleChangeDone(e: ChangeEvent<HTMLInputElement>): void
+  handleClickDelete(): void
 } & ContainerProps
 
 export const View: React.VFC<Props> = (props) => {

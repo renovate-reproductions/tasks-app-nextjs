@@ -1,8 +1,8 @@
 import { errorMap } from '../../../lib/error'
 import { isAxiosError } from '../../../lib/type'
-import { TaskRepositoryInterface } from '../../application/repository-interface/task-repository-interface'
-import { TaskModel } from '../../domain/models/task-model'
-import { API } from '../api'
+import type { TaskRepositoryInterface } from '../../application/repository-interface/task-repository-interface'
+import type { TaskModel } from '../../domain/models/task-model'
+import type { API } from '../api'
 
 type TaskRecord = {
   id: number
@@ -27,7 +27,7 @@ const switchError = (error: Error): Error => {
     return error
   }
 
-  const status = error?.response?.status
+  const status = error.response?.status
 
   if (typeof status === 'undefined') {
     return error

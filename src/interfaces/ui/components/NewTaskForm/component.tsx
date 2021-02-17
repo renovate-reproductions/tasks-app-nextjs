@@ -1,4 +1,5 @@
-import { ChangeEvent, FormEvent, useCallback, useState } from 'react'
+import type { ChangeEvent, FormEvent } from 'react'
+import { useCallback, useState } from 'react'
 
 import { useSubmitHandler } from './hook'
 import * as Styled from './style'
@@ -7,8 +8,8 @@ type ContainerProps = {}
 
 type Props = {
   value: string
-  handleChangeText: (e: ChangeEvent<HTMLInputElement>) => void
-  handleSubmit: (e: FormEvent<HTMLFormElement>) => void
+  handleChangeText(e: ChangeEvent<HTMLInputElement>): void
+  handleSubmit(e: FormEvent<HTMLFormElement>): void
 } & ContainerProps
 
 export const View: React.VFC<Props> = (props) => (
@@ -17,9 +18,9 @@ export const View: React.VFC<Props> = (props) => (
       type="text"
       name="task"
       value={props.value}
-      required={true}
+      required
       maxLength={2 ** 16}
-      autoFocus={true}
+      autoFocus
       onChange={props.handleChangeText}
       placeholder="Add task"
       aria-label="New task"

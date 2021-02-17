@@ -2,7 +2,7 @@ import { memo } from 'react'
 import { useQuery } from 'react-query'
 
 import { ListTasks } from '../../../../application/usecases/list-tasks'
-import { TaskModel } from '../../../../domain/models/task-model'
+import type { TaskModel } from '../../../../domain/models/task-model'
 import { api } from '../../../api'
 import { TaskRepository } from '../../../repositories/task-repository'
 import { TaskLI } from '../TaskLI'

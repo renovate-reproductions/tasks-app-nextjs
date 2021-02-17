@@ -400,10 +400,10 @@
     remark "^13.0.0"
     unist-util-find-all-after "^3.0.2"
 
-"@takamachi/eslint-config@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@takamachi/eslint-config/-/eslint-config-0.0.4.tgz#21fbb3fe30a393b3c39053ced59846d2b09196f6"
-  integrity sha512-+9KMbOclzd84lG/1pn/wH2UmUvfDlxI8rkvIaOq54C4ZQM2aNrB4tQGW4i2CSLKmzIYt9I13iI+smrvfVmuUDg==
+"@takamachi/eslint-config@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@takamachi/eslint-config/-/eslint-config-0.0.5.tgz#091a4a8c329d0bc830e557fc96470921a8296e48"
+  integrity sha512-Im9wQp0rFuV+Cm9QC6yAIt2IYkN2qkY5txfBQtQ+JhS6OtfY05pqEQAxXzLI6g1A8Zn6PPJjQZvSP8cG+Y5rPQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.15.1"
     "@typescript-eslint/parser" "^4.15.1"

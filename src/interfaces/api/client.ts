@@ -9,18 +9,18 @@ type TaskRecord = {
 }
 
 export const getTaskAll = async () =>
-  await http.get<{ items: TaskRecord[] }>('/tasks')
+  http.get<{ items: TaskRecord[] }>('/tasks')
 
 export const getTask = async (params: { id: number }) =>
-  await http.get<TaskRecord>(`/tasks/${params.id}`)
+  http.get<TaskRecord>(`/tasks/${params.id}`)
 
 export const createTask = async (_: {}, data: { title: string }) =>
-  await http.post<TaskRecord>('/tasks', data)
+  http.post<TaskRecord>('/tasks', data)
 
 export const updateTask = async (
   params: { id: number },
   data: { title: string; done: boolean },
-) => await http.put<TaskRecord>(`/tasks/${params.id}`, data)
+) => http.put<TaskRecord>(`/tasks/${params.id}`, data)
 
 export const deleteTask = async (params: { id: number }) =>
-  await http.delete<void>(`/tasks/${params.id}`)
+  http.delete<void>(`/tasks/${params.id}`)

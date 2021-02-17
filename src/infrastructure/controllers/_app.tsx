@@ -1,4 +1,4 @@
-import { AppProps } from 'next/app'
+import type { AppProps } from 'next/app'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { ThemeProvider } from 'styled-components'
@@ -15,16 +15,14 @@ const queryClient = new QueryClient({
 })
 
 export const MyApp = ({ Component, pageProps }: AppProps) => (
-  <>
-    <QueryClientProvider client={queryClient}>
-      {process.env.NODE_ENV !== 'production' && (
-        <ReactQueryDevtools initialIsOpen={false} />
-      )}
+  <QueryClientProvider client={queryClient}>
+    {process.env.NODE_ENV !== 'production' && (
+      <ReactQueryDevtools initialIsOpen={false} />
+    )}
 
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </QueryClientProvider>
-  </>
+    <GlobalStyle />
+    <ThemeProvider theme={theme}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  </QueryClientProvider>
 )

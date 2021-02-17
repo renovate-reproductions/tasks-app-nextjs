@@ -1,4 +1,4 @@
-import { AxiosError } from 'axios'
+import type { AxiosError } from 'axios'
 
 export type Response<T> = Promise<
   | {
@@ -13,4 +13,4 @@ export type Response<T> = Promise<
 
 export const isAxiosError = (err: Error): err is AxiosError =>
   // @ts-expect-error
-  Boolean(err?.isAxiosError)
+  Boolean(err.isAxiosError)

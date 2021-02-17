@@ -1,9 +1,10 @@
-import { ChangeEvent, useCallback } from 'react'
+import type { ChangeEvent } from 'react'
+import { useCallback } from 'react'
 import { useMutation, useQueryClient } from 'react-query'
 
 import { RemoveTask } from '../../../../application/usecases/remove-task'
 import { ReplaceTask } from '../../../../application/usecases/replace-task'
-import { TaskModel } from '../../../../domain/models/task-model'
+import type { TaskModel } from '../../../../domain/models/task-model'
 import { api } from '../../../api'
 import { TaskRepository } from '../../../repositories/task-repository'
 

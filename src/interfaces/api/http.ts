@@ -1,9 +1,12 @@
-import { AxiosRequestConfig, default as axios } from 'axios'
-import { Primitive } from 'utility-types'
+import type { AxiosRequestConfig } from 'axios'
+import { default as axios } from 'axios'
+import type { Primitive } from 'utility-types'
 
 const DOMAIN = process.env.DOMAIN ?? 'https://tasks-api-express.herokuapp.com'
 
-const paramsSerializer = (params: Record<string, Primitive | Primitive[]>) => {
+const paramsSerializer = (params: {
+  [key: string]: Primitive | Primitive[]
+}) => {
   const searchParams = new URLSearchParams()
 
   for (const [key, value] of Object.entries(params)) {

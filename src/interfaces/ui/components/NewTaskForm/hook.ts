@@ -1,8 +1,9 @@
-import { FormEvent, useCallback } from 'react'
+import type { FormEvent } from 'react'
+import { useCallback } from 'react'
 import { useMutation, useQueryClient } from 'react-query'
 
 import { CreateTask } from '../../../../application/usecases/create-task'
-import { TaskModel } from '../../../../domain/models/task-model'
+import type { TaskModel } from '../../../../domain/models/task-model'
 import { api } from '../../../api'
 import { TaskRepository } from '../../../repositories/task-repository'
 
