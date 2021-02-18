@@ -9,10 +9,9 @@
     "dev": "run-p dev:*",
     "dev:next": "next dev",
     "dev:path": "pathpida --enableStatic --watch",
-    "fmt": "run-p fmt:**",
-    "fmt:eslint": "eslint '**/*.{js,jsx,ts,tsx}' --fix --cache",
-    "fmt:json": "prettier --write '**/*.json'",
-    "fmt:md": "prettier --write '**/*.md'",
+    "fmt": "run-s fmt:prettier fmt:package-json fmt:eslint",
+    "fmt:prettier": "prettier --write --tab-width 2 '**/*.{js,jsx,ts,tsx,json,md}'",
+    "fmt:eslint": "eslint '**/*.{js,jsx,ts,tsx}' --cache --fix",
     "fmt:package-json": "sort-package-json",
     "postinstall": "run-p postinstall:**",
     "lint": "run-p lint:**",
@@ -35,7 +34,7 @@
     "styled-normalize": "8.0.7"
   },
   "devDependencies": {
-    "@takamachi/eslint-config": "^0.0.9",
+    "@takamachi/eslint-config": "^0.0.11",
     "@types/eslint": "7.2.6",
     "@types/is-ci": "2.0.0",
     "@types/prettier": "2.2.1",
