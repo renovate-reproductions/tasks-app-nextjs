@@ -380,7 +380,7 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@nuxt/config@^2.14.12":
+"@nuxt/config@^2.15.2":
   version "2.15.2"
   resolved "https://registry.yarnpkg.com/@nuxt/config/-/config-2.15.2.tgz#3ccd981fed40fc56a1bbbdd9a037cb0b7da14065"
   integrity sha512-nSiUvHQLyuvcylrlSmH+dfKuBP2yfvTBxfJmqu1FEew8aj6jjTF5Wfg3kZw6NkSKhuykWuII9WZxi97EzqoGUg==
@@ -3568,7 +3568,7 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next@10.0.7, next@^10.0.6:
+next@10.0.7, next@^10.0.7:
   version "10.0.7"
   resolved "https://registry.yarnpkg.com/next/-/next-10.0.7.tgz#442f8e1da7454de33b0bbcc1ce5684b923597ee6"
   integrity sha512-We0utmwwfkvO12eLyUZd3tX9VLDE3FPpOaHpH3kqKdUTxJzUKt8FLBXCTm0mwsTKW5XColWG8mJvz2OLu3+3QA==
@@ -4014,15 +4014,15 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-pathpida@0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/pathpida/-/pathpida-0.13.0.tgz#a2d318630aaea2aeff0f0252cf1404528312f6a5"
-  integrity sha512-Yjs21kVVdXi+5TWJSxDRohmhRuYM3crz1JyLkxvklog8Mbii7/FXfp7dbQsxb6cVy54uu27XtN80XTyhmjIAgw==
+pathpida@0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/pathpida/-/pathpida-0.13.1.tgz#13f12034bb108c597a9ac4204253aeb51839470c"
+  integrity sha512-WRXNYh1dHq23gWLDZ4g5vv33SXNzBBL9zqDpW+eCrtRtq5pO9el2ydIKiJYkDaDdj7xZKTngsBFT+1XzBRwMPQ==
   dependencies:
-    "@nuxt/config" "^2.14.12"
+    "@nuxt/config" "^2.15.2"
     chokidar "^3.5.1"
     minimist "^1.2.5"
-    next "^10.0.6"
+    next "^10.0.7"
 
 pbkdf2@^3.0.3:
   version "3.1.1"
