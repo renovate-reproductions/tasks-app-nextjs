@@ -23,6 +23,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@socialgouv/matomo-next": "^1.2.1",
     "axios": "0.21.1",
     "next": "10.0.7",
     "preact": "10.5.12",
