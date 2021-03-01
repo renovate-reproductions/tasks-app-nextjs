@@ -36,6 +36,12 @@ export class MyDocument extends Document {
         <Head>
           <title>Tasks</title>
           <meta name="Description" content="Tasks" />
+          <script
+            async
+            defer
+            data-domain="tasks-app-nextjs.vercel.app"
+            src="https://plausible.io/js/plausible.js"
+          />
         </Head>
         <body>
           <Main />
