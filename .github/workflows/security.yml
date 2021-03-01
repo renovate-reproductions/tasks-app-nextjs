@@ -1,9 +1,11 @@
-name: Test
-on: [push, pull_request]
+name: Security Audit
+on: push
+#  schedule:
+#    - cron: '0 0 * * *'
 
 jobs:
-  lint:
-    name: Lint
+  audit:
+    name: Security Audit
     strategy:
       matrix:
         os: [ubuntu-18.04, windows-latest, macos-latest]
@@ -20,5 +22,5 @@ jobs:
         run: npm i npm yarn@1 -g
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Lint
-        run: yarn lint
+      - name: Audit
+        run: yarn audit
