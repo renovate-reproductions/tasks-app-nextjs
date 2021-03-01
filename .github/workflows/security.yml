@@ -20,7 +20,5 @@ jobs:
           node-version: ${{ matrix.node }}
       - name: Install npm and yarn
         run: npm i npm yarn@1 -g
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
       - name: Audit
         run: yarn audit
