@@ -1,17 +1,21 @@
-name: Contiinuous Integration
+name: Continuous Integration
 on: [push, pull_request]
 
 jobs:
   lint:
     name: Lint
-    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, windows-latest, macos-latest]
+        node: [14]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Set Node.js
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: 14.x
+          node-version: ${{ matrix.node }}
       - name: Install npm and yarn
         run: npm i npm yarn@1 -g
       - name: Install dependencies
