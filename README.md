@@ -1,5 +1,8 @@
 # tasks-app-nextjs
 
+[![Contiinuous Integration](https://github.com/macchiitaka/tasks-app-nextjs/actions/workflows/test.yml/badge.svg)](https://github.com/macchiitaka/tasks-app-nextjs/actions/workflows/test.yml)
+[![CodeQL](https://github.com/macchiitaka/tasks-app-nextjs/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/macchiitaka/tasks-app-nextjs/actions/workflows/codeql-analysis.yml)
+
 [Tasks] Web app using Next.js + TypeScript + React Query + styled-components.
 [Demo](https://tasks-app-nextjs.vercel.app/)
 
