@@ -6,16 +6,19 @@ jobs:
     name: Lint
     strategy:
       matrix:
-        os: [ubuntu-18.04, windows-latest, macos-latest]
-        node: [14]
+        # os: [ubuntu-18.04, windows-latest, macos-latest]
+        os: [ubuntu-18.04, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Set Node.js ${{ matrix.node }}
+      - name: Read Node.js version
+        uses: nodenv/actions/node-version@v2.0.10
+        id: nodenv
+      - name: Set Node.js ${{ steps.nodenv.outputs.node-version }}
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: ${{ matrix.node }}
+          node-version: ${{ steps.nodenv.outputs.node-version }}
       - name: Install npm and yarn
         run: npm i npm yarn@1 -g
       # https://github.com/actions/cache/blob/master/examples.md#node---yarn
