@@ -6,21 +6,13 @@ jobs:
     name: Lint
     strategy:
       matrix:
-        # os: [ubuntu-18.04, windows-latest, macos-latest]
-        os: [ubuntu-18.04, macos-latest]
+        os: [ubuntu-18.04, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Read Node.js version
-        uses: nodenv/actions/node-version@v2.0.10
-        id: nodenv
-      - name: Set Node.js ${{ steps.nodenv.outputs.node-version }}
-        uses: actions/setup-node@v2.1.5
-        with:
-          node-version: ${{ steps.nodenv.outputs.node-version }}
-      - name: Install npm and yarn
-        run: npm i npm yarn@1 -g
+      - name: Setup Node.js
+        uses: volta-cli/action@v1.6.0
       # https://github.com/actions/cache/blob/master/examples.md#node---yarn
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
