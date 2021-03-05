@@ -3,16 +3,9 @@ module.exports = {
     ignoreDevErrors: true,
     ignoreBuildErrors: true,
   },
+  future: {
+    webpack5: true,
+  },
   compress: true,
   poweredByHeader: false,
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...(config.resolve.alias || {}),
-      react: 'preact/compat',
-      'react-dom/test-utils': 'preact/test-utils',
-      'react-dom': 'preact/compat',
-    }
-
-    return config
-  },
 }
