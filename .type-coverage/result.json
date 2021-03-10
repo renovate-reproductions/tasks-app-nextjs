@@ -1,0 +1,263 @@
+{
+  "cache": {
+    "lib/$path.ts": {
+      "hash": "41f9e8a05664038f9abc613e89fa594cc038d591",
+      "correctCount": 16,
+      "totalCount": 16,
+      "anys": []
+    },
+    "lib/error.ts": {
+      "hash": "b86d85fe66b8585ce97bb6167d1229a4680c905d",
+      "correctCount": 11,
+      "totalCount": 11,
+      "anys": []
+    },
+    "lib/type.ts": {
+      "hash": "18676acbfccca731156e5dd73aba5b041f8492f0",
+      "correctCount": 18,
+      "totalCount": 18,
+      "anys": []
+    },
+    "next-env.d.ts": {
+      "hash": "92f1c540b245dc0fa83c060a5382b1fbe421fc77",
+      "correctCount": 0,
+      "totalCount": 0,
+      "anys": []
+    },
+    "src/interfaces/ui/style/global.tsx": {
+      "hash": "2c3d050b5e61ce910a8cf9b48c3a13d267af50d9",
+      "correctCount": 4,
+      "totalCount": 4,
+      "anys": []
+    },
+    "src/interfaces/ui/style/theme.ts": {
+      "hash": "c404e45ecedf43bca095730e4bf5a22d199019b1",
+      "correctCount": 7,
+      "totalCount": 7,
+      "anys": []
+    },
+    "src/infrastructure/controllers/_app.tsx": {
+      "hash": "1e477d8e8dfa65f9f9bdc7c84e336ff434ba8eb5",
+      "correctCount": 42,
+      "totalCount": 43,
+      "anys": [
+        {
+          "line": 17,
+          "character": 35,
+          "text": "pageProps",
+          "kind": 1
+        }
+      ]
+    },
+    "pages/_app.tsx": {
+      "hash": "88959110e9111a58097fb64df7a225097f688ba5",
+      "correctCount": 2,
+      "totalCount": 2,
+      "anys": []
+    },
+    "src/infrastructure/controllers/_document.tsx": {
+      "hash": "09c3c340dffbf22af3cda4c50b534be32c5383d8",
+      "correctCount": 57,
+      "totalCount": 57,
+      "anys": []
+    },
+    "pages/_document.tsx": {
+      "hash": "2bb54feea6ee7a927fec8195b60cae96e61a685d",
+      "correctCount": 2,
+      "totalCount": 2,
+      "anys": []
+    },
+    "src/domain/models/task-model.ts": {
+      "hash": "7c81d8b6dc2bb180225f3065c82a8a83dd66f0f1",
+      "correctCount": 8,
+      "totalCount": 8,
+      "anys": []
+    },
+    "src/application/repository-interface/task-repository-interface.ts": {
+      "hash": "55fc219e33360ea18fde45597ef2b4a30661b8e7",
+      "correctCount": 30,
+      "totalCount": 30,
+      "anys": []
+    },
+    "src/application/usecases/create-task.ts": {
+      "hash": "532bb44e70a66a9c3f6c3f57b9f61429d41bd1c8",
+      "correctCount": 17,
+      "totalCount": 17,
+      "anys": []
+    },
+    "src/interfaces/api/http.ts": {
+      "hash": "838d80f285d866caee1d1102a6360ce6e0076108",
+      "correctCount": 48,
+      "totalCount": 48,
+      "anys": []
+    },
+    "src/interfaces/api/client.ts": {
+      "hash": "bdb1d12f3e6e8ff2dd4a83fc3d8c8b0ef5e14727",
+      "correctCount": 47,
+      "totalCount": 47,
+      "anys": []
+    },
+    "src/interfaces/api/index.ts": {
+      "hash": "4fa0bc32ac293ece4cb6ca228e5ac8bbce872ef7",
+      "correctCount": 4,
+      "totalCount": 4,
+      "anys": []
+    },
+    "src/interfaces/repositories/task-repository.ts": {
+      "hash": "346278a5d000ff4e5ff9942a6bea74fef5efe964",
+      "correctCount": 136,
+      "totalCount": 136,
+      "anys": []
+    },
+    "src/interfaces/ui/components/NewTaskForm/hook.ts": {
+      "hash": "63430150e57ca8aed84d52d1b3ba91702dc35dfa",
+      "correctCount": 60,
+      "totalCount": 60,
+      "anys": []
+    },
+    "src/interfaces/ui/components/NewTaskForm/style.tsx": {
+      "hash": "8aa078d91ec1287b95eecfcecae1450afa4f2453",
+      "correctCount": 4,
+      "totalCount": 4,
+      "anys": []
+    },
+    "src/interfaces/ui/components/NewTaskForm/component.tsx": {
+      "hash": "294a1657e8a414fa2bfa7d918ef947fde8d87665",
+      "correctCount": 82,
+      "totalCount": 82,
+      "anys": []
+    },
+    "src/interfaces/ui/components/NewTaskForm/index.ts": {
+      "hash": "ddc0abe35eb4218204990c0a76701bfcd5a8232e",
+      "correctCount": 1,
+      "totalCount": 1,
+      "anys": []
+    },
+    "src/application/usecases/list-tasks.ts": {
+      "hash": "47a25a7f8a3f541c3e7732572aded320cd38dbf1",
+      "correctCount": 13,
+      "totalCount": 13,
+      "anys": []
+    },
+    "src/application/usecases/remove-task.ts": {
+      "hash": "09ada95c85f69f2684d57ec704ceadfe40d0ce18",
+      "correctCount": 17,
+      "totalCount": 17,
+      "anys": []
+    },
+    "src/application/usecases/replace-task.ts": {
+      "hash": "e54d737d48429b523e9e6c146cd5eedc87b1d06c",
+      "correctCount": 20,
+      "totalCount": 20,
+      "anys": []
+    },
+    "src/interfaces/ui/components/TaskLI/hook.ts": {
+      "hash": "60ef87a4aef911d1f7b8cf3d97f3f6c86f16ee56",
+      "correctCount": 93,
+      "totalCount": 93,
+      "anys": []
+    },
+    "src/interfaces/ui/components/TaskLI/style.tsx": {
+      "hash": "f383daac68d571d6548a6cb75bfb403bc7b0f766",
+      "correctCount": 16,
+      "totalCount": 16,
+      "anys": []
+    },
+    "src/interfaces/ui/components/TaskLI/component.tsx": {
+      "hash": "ad265f1c10066187d44954156134b867138e6538",
+      "correctCount": 76,
+      "totalCount": 76,
+      "anys": []
+    },
+    "src/interfaces/ui/components/TaskLI/index.ts": {
+      "hash": "827e19aa81672fab8d21a186f23b6bb2232a898e",
+      "correctCount": 1,
+      "totalCount": 1,
+      "anys": []
+    },
+    "src/interfaces/ui/components/TaskUList/style.tsx": {
+      "hash": "5286287f20da657e3cab71d7a43b41842b8ffb4a",
+      "correctCount": 2,
+      "totalCount": 2,
+      "anys": []
+    },
+    "src/interfaces/ui/components/TaskUList/component.tsx": {
+      "hash": "2b4b67b75e5443917b5820f75b63c596aed17676",
+      "correctCount": 73,
+      "totalCount": 73,
+      "anys": []
+    },
+    "src/interfaces/ui/components/TaskUList/index.ts": {
+      "hash": "cfb2323a904d38d3897271f4e427178f7a68847f",
+      "correctCount": 1,
+      "totalCount": 1,
+      "anys": []
+    },
+    "src/interfaces/ui/components/Page/style.tsx": {
+      "hash": "bb9306b41799df25a518b92a86732259d4141086",
+      "correctCount": 3,
+      "totalCount": 3,
+      "anys": []
+    },
+    "src/interfaces/ui/components/Page/component.tsx": {
+      "hash": "a0df7dd9da0bbd0cf4b7f53c3c5903649a19e9b5",
+      "correctCount": 29,
+      "totalCount": 29,
+      "anys": []
+    },
+    "src/interfaces/ui/components/Page/index.ts": {
+      "hash": "94a556f76a8a7a2637760a81794b75cea018262e",
+      "correctCount": 1,
+      "totalCount": 1,
+      "anys": []
+    },
+    "src/infrastructure/controllers/index.tsx": {
+      "hash": "52a3bdf984b8b7a7c3dc09515c88041b95bada9f",
+      "correctCount": 10,
+      "totalCount": 10,
+      "anys": []
+    },
+    "pages/index.tsx": {
+      "hash": "82ff2547d4cd6050b6cd514d0cdf06b554218a2c",
+      "correctCount": 2,
+      "totalCount": 2,
+      "anys": []
+    },
+    "src/application/usecases/get-task.ts": {
+      "hash": "56853f7d3c8af5d829bb5e89dbb012be50683db2",
+      "correctCount": 17,
+      "totalCount": 17,
+      "anys": []
+    },
+    "src/interfaces/ui/components/Page/hook.ts": {
+      "hash": "d958af89139f3de030dea19be0c18c8a3ea8fe45",
+      "correctCount": 1,
+      "totalCount": 1,
+      "anys": []
+    },
+    "src/interfaces/ui/components/TaskUList/hook.ts": {
+      "hash": "60ef87a4aef911d1f7b8cf3d97f3f6c86f16ee56",
+      "correctCount": 93,
+      "totalCount": 93,
+      "anys": []
+    },
+    "src/interfaces/ui/store.ts": {
+      "hash": "c5ebfc7c78fd8925a8f7d90cd6e080515cca1dec",
+      "correctCount": 6,
+      "totalCount": 6,
+      "anys": []
+    },
+    "types/global.d.ts": {
+      "hash": "c8d811ddc8957ecf41a425f0f8ff0b3b8818bccb",
+      "correctCount": 3,
+      "totalCount": 3,
+      "anys": []
+    },
+    "types/styled.d.ts": {
+      "hash": "dfe5181f75069928c0bba3f47306c3d295a90044",
+      "correctCount": 3,
+      "totalCount": 3,
+      "anys": []
+    }
+  }
+}
