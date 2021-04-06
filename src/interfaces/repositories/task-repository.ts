@@ -61,7 +61,10 @@ export class TaskRepository implements TaskRepositoryInterface {
     } catch (error) {
       return {
         success: false,
-        error: switchError(error),
+        error:
+          error instanceof Error
+            ? switchError(error)
+            : new Error('Unexpected error'),
       }
     }
   }
@@ -75,7 +78,10 @@ export class TaskRepository implements TaskRepositoryInterface {
     } catch (error) {
       return {
         success: false,
-        error: switchError(error),
+        error:
+          error instanceof Error
+            ? switchError(error)
+            : new Error('Unexpected error'),
       }
     }
   }
@@ -89,7 +95,10 @@ export class TaskRepository implements TaskRepositoryInterface {
     } catch (error) {
       return {
         success: false,
-        error: switchError(error),
+        error:
+          error instanceof Error
+            ? switchError(error)
+            : new Error('Unexpected error'),
       }
     }
   }
@@ -106,7 +115,10 @@ export class TaskRepository implements TaskRepositoryInterface {
     } catch (error) {
       return {
         success: false,
-        error: switchError(error),
+        error:
+          error instanceof Error
+            ? switchError(error)
+            : new Error('Unexpected error'),
       }
     }
   }
@@ -124,7 +136,10 @@ export class TaskRepository implements TaskRepositoryInterface {
     } catch (error) {
       return {
         success: false,
-        error: switchError(error),
+        error:
+          error instanceof Error
+            ? switchError(error)
+            : new Error('Unexpected error'),
       }
     }
   }
