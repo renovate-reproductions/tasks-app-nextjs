@@ -4,7 +4,7 @@ module.exports = {
     '@takamachi/eslint-config/presets/react-typescript-prettier',
     'plugin:compat/recommended',
     'plugin:jest-dom/recommended',
-    'plugin:testing-library/recommended',
+    'plugin:testing-library/dom',
     'plugin:testing-library/react',
   ],
   parserOptions: {

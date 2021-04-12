@@ -10,7 +10,7 @@ const CF_BEACON = {
 export class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
-    const originalRenderPage = ctx.renderPage
+    const { renderPage: originalRenderPage } = ctx
 
     try {
       ctx.renderPage = () =>
@@ -39,6 +39,7 @@ export class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
+          <title>Tasks</title>
           <meta name="Description" content="Tasks" />
           <script
             async
