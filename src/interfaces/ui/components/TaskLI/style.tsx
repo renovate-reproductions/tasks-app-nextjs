@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const LI = styled.li`
   display: grid;
@@ -17,22 +17,22 @@ export const LI = styled.li`
   & > :nth-child(3) {
     grid-area: delele;
   }
-`
+`;
 
 export const Label = styled.label`
   overflow: hidden;
   color: ${(props) => props.theme.color.black};
   text-overflow: ellipsis;
   white-space: nowrap;
-`
+`;
 
 export const Input = styled.input`
   &:checked + ${Label} {
     color: ${(props) => props.theme.color.black70};
     text-decoration: line-through;
   }
-`
+`;
 
 export const Button = styled.button`
   height: 32px;
-`
+`;

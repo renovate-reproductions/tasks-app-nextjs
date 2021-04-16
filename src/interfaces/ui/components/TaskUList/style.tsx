@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const UList = styled.ul`
   margin: 0;
@@ -8,4 +8,4 @@ export const UList = styled.ul`
   & > :not(:first-child) {
     margin-top: 12px;
   }
-`
+`;

@@ -1,1 +1,1 @@
-export { TaskLI } from './component'
+export { TaskLI } from './component';

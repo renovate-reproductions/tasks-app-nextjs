@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Form = styled.form`
   display: grid;
@@ -13,14 +13,14 @@ export const Form = styled.form`
   & > :nth-child(2) {
     grid-area: submit;
   }
-`
+`;
 
 export const Input = styled.input`
   box-sizing: border-box;
   height: 32px;
   padding: 0 8px;
-`
+`;
 
 export const Button = styled.button`
   height: 32px;
-`
+`;

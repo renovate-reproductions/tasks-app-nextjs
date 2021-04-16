@@ -1,18 +1,18 @@
-import type { ChangeEvent } from 'react'
+import type { ChangeEvent } from 'react';
 
-import type { TaskModel } from '../../../../domain/models/task-model'
-import { useChangeDoneHandler, useClickDeleteHandler } from './hook'
-import * as Styled from './style'
+import type { TaskModel } from '../../../../domain/models/task-model';
+import { useChangeDoneHandler, useClickDeleteHandler } from './hook';
+import * as Styled from './style';
 
-type ContainerProps = TaskModel
+type ContainerProps = TaskModel;
 
 type Props = {
-  handleChangeDone(e: ChangeEvent<HTMLInputElement>): void
-  handleClickDelete(): void
-} & ContainerProps
+  handleChangeDone(e: ChangeEvent<HTMLInputElement>): void;
+  handleClickDelete(): void;
+} & ContainerProps;
 
 export const View: React.VFC<Props> = (props) => {
-  const id = `item_${props.id}`
+  const id = `item_${props.id}`;
 
   return (
     <Styled.LI>
@@ -27,12 +27,12 @@ export const View: React.VFC<Props> = (props) => {
         Delete
       </Styled.Button>
     </Styled.LI>
-  )
-}
+  );
+};
 
 export const TaskLI: React.VFC<ContainerProps> = (props) => {
-  const handleChangeDone = useChangeDoneHandler(props.id, props.title)
-  const handleClickDelete = useClickDeleteHandler(props.id, props.title)
+  const handleChangeDone = useChangeDoneHandler(props.id, props.title);
+  const handleClickDelete = useClickDeleteHandler(props.id, props.title);
 
   return (
     <View
@@ -40,5 +40,5 @@ export const TaskLI: React.VFC<ContainerProps> = (props) => {
       handleChangeDone={handleChangeDone}
       handleClickDelete={handleClickDelete}
     />
-  )
-}
+  );
+};
