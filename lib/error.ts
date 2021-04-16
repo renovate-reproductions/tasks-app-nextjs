@@ -6,4 +6,4 @@ export const errorMap = new Map([
   [400, ErrorBadRequest],
   [404, ErrorNotFound],
   [500, ErrorInternalServerError],
-])
+]);

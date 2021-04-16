@@ -1,13 +1,13 @@
-import type { TaskModel } from '../../domain/models/task-model'
-import type { TaskRepositoryInterface } from '../repository-interface/task-repository-interface'
+import type { TaskModel } from '../../domain/models/task-model';
+import type { TaskRepositoryInterface } from '../repository-interface/task-repository-interface';
 
 export class RemoveTask {
-  private readonly taskRepository: TaskRepositoryInterface
+  private readonly taskRepository: TaskRepositoryInterface;
 
   public constructor(taskRepository: TaskRepositoryInterface) {
-    this.taskRepository = taskRepository
+    this.taskRepository = taskRepository;
   }
 
   public readonly execute = (id: TaskModel['id']) =>
-    this.taskRepository.delete(id)
+    this.taskRepository.delete(id);
 }

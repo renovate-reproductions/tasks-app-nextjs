@@ -1,10 +1,10 @@
-import { NewTaskForm } from '../NewTaskForm'
-import { TaskUList } from '../TaskUList'
-import * as Styled from './style'
+import { NewTaskForm } from '../NewTaskForm';
+import { TaskUList } from '../TaskUList';
+import * as Styled from './style';
 
-type ContainerProps = {}
+type ContainerProps = {};
 
-type Props = {} & ContainerProps
+type Props = {} & ContainerProps;
 
 export const View: React.VFC<Props> = () => (
   <Styled.Main>
@@ -14,6 +14,6 @@ export const View: React.VFC<Props> = () => (
       <TaskUList />
     </Styled.DivUListWrapper>
   </Styled.Main>
-)
+);
 
-export const Page: React.VFC<ContainerProps> = (props) => <View {...props} />
+export const Page: React.VFC<ContainerProps> = (props) => <View {...props} />;

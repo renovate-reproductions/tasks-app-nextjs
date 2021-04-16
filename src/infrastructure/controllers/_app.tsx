@@ -1,11 +1,11 @@
-import type { AppProps } from 'next/app'
-import { useEffect } from 'react'
-import { QueryClient, QueryClientProvider } from 'react-query'
-import { ReactQueryDevtools } from 'react-query/devtools'
-import { ThemeProvider } from 'styled-components'
+import type { AppProps } from 'next/app';
+import { useEffect } from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import { ThemeProvider } from 'styled-components';
 
-import { GlobalStyle } from '../../interfaces/ui/style/global'
-import { theme } from '../../interfaces/ui/style/theme'
+import { GlobalStyle } from '../../interfaces/ui/style/global';
+import { theme } from '../../interfaces/ui/style/theme';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -13,17 +13,17 @@ const queryClient = new QueryClient({
       refetchOnWindowFocus: false,
     },
   },
-})
+});
 
 export const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
-    ;(async () => {
-      ;(await import('@socialgouv/matomo-next')).init({
+    (async () => {
+      (await import('@socialgouv/matomo-next')).init({
         url: process.env.NEXT_PUBLIC_MATOMO_URL ?? '',
         siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID ?? '',
-      })
-    })()
-  }, [])
+      });
+    })();
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -36,5 +36,5 @@ export const MyApp = ({ Component, pageProps }: AppProps) => {
         <Component {...pageProps} />
       </ThemeProvider>
     </QueryClientProvider>
-  )
-}
+  );
+};

@@ -1,1 +1,1 @@
-export { NewTaskForm } from './component'
+export { NewTaskForm } from './component';

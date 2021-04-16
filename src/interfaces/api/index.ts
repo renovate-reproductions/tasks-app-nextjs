@@ -1,5 +1,5 @@
-import * as api from './client'
+import * as api from './client';
 
-export type API = typeof api
+export type API = typeof api;
 
-export { api }
+export { api };
