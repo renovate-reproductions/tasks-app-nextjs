@@ -34,7 +34,7 @@
     "styled-normalize": "8.0.7"
   },
   "devDependencies": {
-    "@takamachi/eslint-config": "^0.3.4",
+    "@takamachi/eslint-config": "^0.3.5",
     "@takamachi/prettier-config": "^1.1.0",
     "@types/eslint": "7.2.10",
     "@types/is-ci": "3.0.0",
