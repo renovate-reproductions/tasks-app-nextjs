@@ -47,7 +47,7 @@
     "@types/stylelint": "9.10.1",
     "eslint": "7.25.0",
     "eslint-plugin-compat": "3.9.0",
-    "eslint-plugin-jest": "24.3.5",
+    "eslint-plugin-jest": "24.3.6",
     "eslint-plugin-jest-dom": "3.8.1",
     "eslint-plugin-testing-library": "4.1.2",
     "husky": "6.0.0",
