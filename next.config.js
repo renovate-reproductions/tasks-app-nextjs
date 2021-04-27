@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('next/dist/next-server/server/config-shared').NextConfig} */
+const config = {
   typescript: {
     ignoreDevErrors: true,
     ignoreBuildErrors: true,
@@ -9,3 +10,5 @@ module.exports = {
   compress: true,
   poweredByHeader: false,
 };
+
+module.exports = config;
