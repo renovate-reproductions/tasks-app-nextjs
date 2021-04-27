@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('@babel/core').TransformOptions} */
+const config = {
   presets: ['next/babel'],
   plugins: [
     [
@@ -12,3 +13,5 @@ module.exports = {
     ],
   ],
 };
+
+module.exports = config;
