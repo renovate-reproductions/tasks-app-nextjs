@@ -2,6 +2,7 @@ module.exports = {
   root: true,
   extends: [
     '@takamachi/eslint-config/presets/react-typescript-prettier',
+    'plugin:@next/next/recommended',
     'plugin:compat/recommended',
     'plugin:jest-dom/recommended',
     'plugin:testing-library/dom',
