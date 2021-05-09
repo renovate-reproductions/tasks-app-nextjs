@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^10.2.0",
-    "@takamachi/eslint-config": "^0.3.7",
+    "@takamachi/eslint-config": "^1.0.0",
     "@takamachi/prettier-config": "^1.1.0",
     "@types/babel__core": "^7.1.14",
     "@types/eslint": "7.2.10",
