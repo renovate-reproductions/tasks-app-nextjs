@@ -38,7 +38,7 @@
     "@takamachi/eslint-config": "^1.0.1",
     "@takamachi/prettier-config": "^1.1.0",
     "@types/babel__core": "^7.1.14",
-    "@types/eslint": "7.2.10",
+    "@types/eslint": "7.2.11",
     "@types/is-ci": "3.0.0",
     "@types/prettier": "^2.2.3",
     "@types/react": "17.0.6",
