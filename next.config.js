@@ -4,9 +4,7 @@ const config = {
     ignoreDevErrors: true,
     ignoreBuildErrors: true,
   },
-  future: {
-    webpack5: true,
-  },
+  webpack5: true,
   compress: true,
   poweredByHeader: false,
 };
