@@ -39,7 +39,6 @@ export class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
-          <title>Tasks</title>
           <meta name="Description" content="Tasks" />
           <script
             async
