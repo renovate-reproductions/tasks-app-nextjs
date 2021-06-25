@@ -2,7 +2,6 @@ module.exports = {
   root: true,
   extends: [
     '@takamachi/eslint-config/presets/react-typescript-prettier',
-    // 'plugin:@next/next/recommended',
     'next',
     'next/core-web-vitals',
     'plugin:compat/recommended',
