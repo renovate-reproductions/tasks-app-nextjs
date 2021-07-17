@@ -45,7 +45,7 @@
     "@types/react-is": "17.0.2",
     "@types/styled-components": "5.1.11",
     "@types/stylelint": "13.13.1",
-    "eslint": "7.30.0",
+    "eslint": "7.31.0",
     "eslint-config-next": "^11.0.1",
     "eslint-plugin-compat": "3.11.0",
     "eslint-plugin-jest": "24.3.6",
