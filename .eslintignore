@@ -4,3 +4,4 @@
 /*rc.js
 /*.config.js
 *.d.ts
+/src/aws-exports.js
