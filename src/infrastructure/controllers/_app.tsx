@@ -7,11 +7,11 @@ import { GlobalStyle } from '../../interfaces/ui/style/global';
 import { theme } from '../../interfaces/ui/style/theme';
 
 const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-    },
-  },
+  // defaultOptions: {
+  //   queries: {
+  //     refetchOnWindowFocus: false,
+  //   },
+  // },
 });
 
 export const MyApp = ({ Component, pageProps }: AppProps) => (
