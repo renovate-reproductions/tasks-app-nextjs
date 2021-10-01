@@ -1,3 +1,5 @@
+import type { AxiosResponse } from 'axios';
+
 import { http } from './http';
 
 type TaskRecord = {
@@ -15,12 +17,13 @@ export const getTask = async (params: { id: number }) =>
   http.get<TaskRecord>(`/tasks/${params.id}`);
 
 export const createTask = async (_: {}, data: { title: string }) =>
-  http.post<TaskRecord>('/tasks', data);
+  http.post<typeof data, AxiosResponse<TaskRecord>>('/tasks', data);
 
 export const updateTask = async (
   params: { id: number },
   data: { title: string; done: boolean },
-) => http.put<TaskRecord>(`/tasks/${params.id}`, data);
+) =>
+  http.put<typeof data, AxiosResponse<TaskRecord>>(`/tasks/${params.id}`, data);
 
 export const deleteTask = async (params: { id: number }) =>
   http.delete<void>(`/tasks/${params.id}`);
