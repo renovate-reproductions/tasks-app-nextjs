@@ -8,12 +8,12 @@ type ContainerProps = {};
 
 type Props = {
   value: string;
-  handleChangeText(e: ChangeEvent<HTMLInputElement>): void;
-  handleSubmit(e: FormEvent<HTMLFormElement>): void;
+  onChangeText(e: ChangeEvent<HTMLInputElement>): void;
+  onSubmit(e: FormEvent<HTMLFormElement>): void;
 } & ContainerProps;
 
 export const View: React.VFC<Props> = (props) => (
-  <Styled.Form onSubmit={props.handleSubmit}>
+  <Styled.Form onSubmit={props.onSubmit}>
     <Styled.Input
       type="text"
       name="task"
@@ -21,7 +21,7 @@ export const View: React.VFC<Props> = (props) => (
       required
       maxLength={2 ** 16}
       autoFocus
-      onChange={props.handleChangeText}
+      onChange={props.onChangeText}
       placeholder="Add task"
       aria-label="New task"
     />
@@ -46,8 +46,8 @@ export const NewTaskForm: React.VFC<ContainerProps> = (props) => {
     <View
       {...props}
       value={value}
-      handleChangeText={handleChangeText}
-      handleSubmit={handleSubmit}
+      onChangeText={handleChangeText}
+      onSubmit={handleSubmit}
     />
   );
 };

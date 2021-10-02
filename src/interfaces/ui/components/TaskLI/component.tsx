@@ -7,8 +7,8 @@ import * as Styled from './style';
 type ContainerProps = TaskModel;
 
 type Props = {
-  handleChangeDone(e: ChangeEvent<HTMLInputElement>): void;
-  handleClickDelete(): void;
+  onChangeDone(e: ChangeEvent<HTMLInputElement>): void;
+  onClickDelete(): void;
 } & ContainerProps;
 
 export const View: React.VFC<Props> = (props) => {
@@ -20,10 +20,10 @@ export const View: React.VFC<Props> = (props) => {
         type="checkbox"
         id={id}
         checked={props.done}
-        onChange={props.handleChangeDone}
+        onChange={props.onChangeDone}
       />
       <Styled.Label htmlFor={id}>{props.title}</Styled.Label>
-      <Styled.Button type="button" onClick={props.handleClickDelete}>
+      <Styled.Button type="button" onClick={props.onClickDelete}>
         Delete
       </Styled.Button>
     </Styled.LI>
@@ -37,8 +37,8 @@ export const TaskLI: React.VFC<ContainerProps> = (props) => {
   return (
     <View
       {...props}
-      handleChangeDone={handleChangeDone}
-      handleClickDelete={handleClickDelete}
+      onChangeDone={handleChangeDone}
+      onClickDelete={handleClickDelete}
     />
   );
 };
