@@ -3,7 +3,7 @@ import React from 'react';
 
 import { View } from './component';
 
-export default {
+const meta: ComponentMeta<typeof View> = {
   title: 'Component/TaskUList/View',
   component: View,
   args: {
@@ -26,7 +26,8 @@ export default {
       },
     ],
   },
-} as ComponentMeta<typeof View>;
+};
+export default meta;
 
 const Template: ComponentStory<typeof View> = (args) => <View {...args} />;
 
