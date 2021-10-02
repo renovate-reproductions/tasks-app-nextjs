@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 
 import { View } from './component';
 
