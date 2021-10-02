@@ -41,7 +41,7 @@
     "@storybook/addon-essentials": "^6.3.9",
     "@storybook/addon-links": "^6.3.9",
     "@storybook/react": "^6.3.9",
-    "@takamachi/eslint-config": "^1.0.19",
+    "@takamachi/eslint-config": "^1.1.1",
     "@takamachi/prettier-config": "^1.1.0",
     "@types/babel__core": "^7.1.16",
     "@types/eslint": "7.28.0",

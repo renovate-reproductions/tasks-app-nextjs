@@ -1,5 +1,4 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import { useMemo } from 'react';
 
 import { View } from './component';
 
