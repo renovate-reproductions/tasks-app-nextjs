@@ -5,6 +5,7 @@ export const parameters = {
     argTypesRegex: '^on[A-Z].*',
   },
   controls: {
+    expanded: true,
     matchers: {
       date: /^(created|updated)At$/,
     },
