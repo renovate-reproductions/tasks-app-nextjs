@@ -1,4 +1,5 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
+import styled from 'styled-components';
 
 import { View } from './component';
 
@@ -15,7 +16,11 @@ const meta: ComponentMeta<typeof View> = {
 };
 export default meta;
 
-const Template: ComponentStory<typeof View> = (args) => <View {...args} />;
+const Template: ComponentStory<typeof View> = (args) => (
+  <Ul>
+    <View {...args} />
+  </Ul>
+);
 
 export const Default = Template.bind({});
 Default.args = {};
@@ -24,3 +29,8 @@ export const Done = Template.bind({});
 Done.args = {
   done: true,
 };
+
+export const Ul = styled.ul`
+  margin: 0;
+  padding: 0;
+`;
