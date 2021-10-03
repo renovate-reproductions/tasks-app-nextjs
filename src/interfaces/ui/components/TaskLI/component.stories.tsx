@@ -30,7 +30,7 @@ Done.args = {
   done: true,
 };
 
-export const Ul = styled.ul`
+const Ul = styled.ul`
   margin: 0;
   padding: 0;
 `;
