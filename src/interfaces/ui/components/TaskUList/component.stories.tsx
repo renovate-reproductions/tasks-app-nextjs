@@ -1,6 +1,7 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { rest } from 'msw';
 
+import type { TaskModel } from '../../../../domain/models/task-model';
 import { TaskUList } from './component';
 
 const meta: ComponentMeta<typeof TaskUList> = {
@@ -20,7 +21,7 @@ Default.parameters = {
       res(
         ctx.delay(500),
         ctx.status(200),
-        ctx.json({
+        ctx.json<{ items: TaskModel[] }>({
           items: [
             {
               id: 1,
