@@ -17,9 +17,10 @@ const queryClient = new QueryClient({
 
 export const Provider: FC = (props) => (
   <QueryClientProvider client={queryClient}>
-    {process.env.NODE_ENV !== 'production' && (
-      <ReactQueryDevtools initialIsOpen={false} />
-    )}
+    {process.env.NODE_ENV !== 'production' &&
+      process.env.STORYBOOK !== 'true' && (
+        <ReactQueryDevtools initialIsOpen={false} />
+      )}
 
     <GlobalStyle />
     <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
