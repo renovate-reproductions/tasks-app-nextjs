@@ -1,10 +1,9 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import styled from 'styled-components';
 
 import { View } from './component';
 
 const meta: ComponentMeta<typeof View> = {
-  title: 'Component/TaskLI/View',
+  title: 'Component/TaskLI',
   component: View,
   args: {
     id: 1,
@@ -13,14 +12,17 @@ const meta: ComponentMeta<typeof View> = {
     title: 'TODO_01',
     done: false,
   },
+  parameters: {
+    a11y: {
+      config: {
+        rules: [{ id: 'listitem', enabled: false }],
+      },
+    },
+  },
 };
 export default meta;
 
-const Template: ComponentStory<typeof View> = (args) => (
-  <Ul>
-    <View {...args} />
-  </Ul>
-);
+const Template: ComponentStory<typeof View> = (args) => <View {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};
@@ -29,8 +31,3 @@ export const Done = Template.bind({});
 Done.args = {
   done: true,
 };
-
-const Ul = styled.ul`
-  margin: 0;
-  padding: 0;
-`;
