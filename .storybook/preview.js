@@ -1,6 +1,6 @@
 import { Provider } from '../src/infrastructure/controllers/_app';
 import { addDecorator } from '@storybook/react';
-import { initializeWorker, mswDecorator } from 'msw-storybook-addon';
+import { initialize, mswDecorator } from 'msw-storybook-addon';
 
 export const parameters = {
   actions: {
@@ -30,5 +30,5 @@ export const decorators = [
   ),
 ];
 
-initializeWorker();
+initialize();
 addDecorator(mswDecorator);
