@@ -18,8 +18,8 @@ const convertToModel = ({
   ...rest
 }: TaskRecord): TaskModel => ({
   ...rest,
-  createdAt: new Date(created_at),
-  updatedAt: new Date(updated_at),
+  createdAt: created_at,
+  updatedAt: updated_at,
 });
 
 const switchError = (error: Error): Error => {

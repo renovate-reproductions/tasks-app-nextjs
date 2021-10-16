@@ -25,15 +25,15 @@ Default.parameters = {
           items: [
             {
               id: 1,
-              createdAt: new Date('2021-01-01 00:00'),
-              updatedAt: new Date('2021-01-01 00:00'),
+              createdAt: '2021-01-01 00:00',
+              updatedAt: '2021-01-01 00:00',
               title: 'TODO_01',
               done: false,
             },
             {
               id: 2,
-              createdAt: new Date('2021-01-01 00:00'),
-              updatedAt: new Date('2021-01-01 00:00'),
+              createdAt: '2021-01-01 00:00',
+              updatedAt: '2021-01-01 00:00',
               title: 'TODO_02',
               done: true,
             },

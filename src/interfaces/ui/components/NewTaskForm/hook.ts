@@ -17,7 +17,7 @@ export const useSubmitHandler = (value: string, callback: () => void) => {
       onMutate: async (title: string) => {
         await queryClient.cancelQueries('todos');
 
-        const now = new Date();
+        const now = new Date().toISOString();
         const newTask: TaskModel = {
           id: Math.random(),
           title,

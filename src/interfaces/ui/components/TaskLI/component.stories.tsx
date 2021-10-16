@@ -7,8 +7,8 @@ const meta: ComponentMeta<typeof View> = {
   component: View,
   args: {
     id: 1,
-    createdAt: new Date('2021-01-01 00:00'),
-    updatedAt: new Date('2021-01-01 00:00'),
+    createdAt: '2021-01-01 00:00',
+    updatedAt: '2021-01-01 00:00',
     title: 'TODO_01',
     done: false,
   },

@@ -1,7 +1,7 @@
 export type TaskModel = {
   id: number;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string;
+  updatedAt: string;
   title: string;
   done: boolean;
 };

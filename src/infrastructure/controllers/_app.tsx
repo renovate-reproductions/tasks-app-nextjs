@@ -1,7 +1,8 @@
 import type { AppProps } from 'next/app';
 import type { FC } from 'react';
 import { useMemo } from 'react';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import type { DehydratedState } from 'react-query';
+import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { ThemeProvider } from 'styled-components';
 
@@ -15,6 +16,7 @@ type GetConstructorArgs<T> = T extends new (...args: infer U) => any
 
 export const Provider: FC<{
   queryClientConfig?: GetConstructorArgs<typeof QueryClient>[0];
+  dehydratedState?: DehydratedState;
 }> = (props) => {
   const queryClient = useMemo(
     () =>
@@ -32,19 +34,21 @@ export const Provider: FC<{
 
   return (
     <QueryClientProvider client={queryClient}>
-      {process.env.NODE_ENV !== 'production' &&
-        process.env.STORYBOOK !== 'true' && (
-          <ReactQueryDevtools initialIsOpen={false} />
-        )}
+      <Hydrate state={props.dehydratedState}>
+        {process.env.NODE_ENV !== 'production' &&
+          process.env.STORYBOOK !== 'true' && (
+            <ReactQueryDevtools initialIsOpen={false} />
+          )}
 
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+      </Hydrate>
     </QueryClientProvider>
   );
 };
 
 export const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Provider>
+  <Provider dehydratedState={pageProps.dehydratedState}>
     <Component {...pageProps} />
   </Provider>
 );
