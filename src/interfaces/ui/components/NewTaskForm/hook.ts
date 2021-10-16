@@ -17,22 +17,39 @@ export const useSubmitHandler = (value: string, callback: () => void) => {
       onMutate: async (title: string) => {
         await queryClient.cancelQueries(['tasks']);
 
-        queryClient.setQueryData<TaskModel[]>(['tasks'], (old) => {
-          const now = new Date();
+        const now = new Date();
+        const newTask: TaskModel = {
+          id: Math.random(),
+          title,
+          done: false,
+          createdAt: now,
+          updatedAt: now,
+        };
 
-          const newTask: TaskModel = {
-            id: Math.random(),
-            title,
-            done: false,
-            createdAt: now,
-            updatedAt: now,
-          };
+        queryClient.setQueryData<TaskModel[]>(['tasks'], (old) => [
+          newTask,
+          ...(old ?? []),
+        ]);
 
-          return [newTask, ...(old ?? [])];
-        });
+        return newTask;
       },
-      onSettled: (/* data, error, variables, context */) => {
-        queryClient.invalidateQueries(['tasks']);
+      onSuccess: async (result, _, newTask) => {
+        if (!newTask) {
+          return;
+        }
+
+        if (!result.success) {
+          queryClient.setQueryData<TaskModel[]>(['tasks'], (tasks) =>
+            (tasks ?? []).filter((task) => task.id !== newTask.id),
+          );
+          return;
+        }
+
+        queryClient.setQueryData<TaskModel[]>(['tasks'], (tasks) =>
+          (tasks ?? []).map((task) =>
+            task.id === newTask.id ? result.data : task,
+          ),
+        );
       },
     },
   );
