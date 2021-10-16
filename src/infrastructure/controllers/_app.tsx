@@ -17,7 +17,16 @@ export const Provider: FC<{
   queryClientConfig?: GetConstructorArgs<typeof QueryClient>[0];
 }> = (props) => {
   const queryClient = useMemo(
-    () => new QueryClient(props.queryClientConfig ?? {}),
+    () =>
+      new QueryClient(
+        props.queryClientConfig ?? {
+          defaultOptions: {
+            queries: {
+              refetchOnWindowFocus: false,
+            },
+          },
+        },
+      ),
     [props.queryClientConfig],
   );
 
