@@ -21,45 +21,25 @@ export const useChangeDoneHandler = (id: number, title: string) => {
       }),
     {
       onMutate: async (value) => {
-        queryClient.setQueryData<TaskModel[]>(['tasks'], (old) => {
-          if (!old) {
-            return [];
-          }
-
-          return old.map((task) =>
-            task.id === id
-              ? {
-                  ...task,
-                  done: value,
-                }
-              : task,
-          );
-        });
-
-        return value;
-      },
-      onSuccess: async (result, _, value) => {
-        if (typeof value === 'undefined') {
-          return;
-        }
-
-        if (!result.success) {
-          queryClient.setQueryData<TaskModel[]>(['tasks'], (old) => {
-            if (!old) {
-              return [];
-            }
-
-            return old.map((task) =>
+        queryClient.setQueryData<TaskModel[]>(
+          ['tasks'],
+          (tasks) =>
+            tasks?.map((task) =>
               task.id === id
                 ? {
                     ...task,
-                    done: !value,
+                    done: value,
                   }
                 : task,
-            );
-          });
+            ) ?? [],
+        );
+      },
+      onSuccess: async (result) => {
+        if (!result.success) {
+          queryClient.invalidateQueries(['tasks']);
         }
       },
+      retry: 5,
     },
   );
 
@@ -79,32 +59,17 @@ export const useClickDeleteHandler = (id: number, title: string) => {
     async () => new RemoveTask(new TaskRepository(api)).execute(id),
     {
       onMutate: async () => {
-        const target = queryClient
-          .getQueryData<TaskModel[]>(['tasks'])
-          ?.find((task) => task.id === id);
-
         queryClient.setQueryData<TaskModel[]>(
           ['tasks'],
-          (old) => old?.filter((task) => task.id !== id) ?? [],
+          (tasks) => tasks?.filter((task) => task.id !== id) ?? [],
         );
-
-        return target;
       },
-      onSuccess: async (result, _, target) => {
-        if (!target) {
-          return;
-        }
-
+      onSuccess: async (result) => {
         if (!result.success) {
-          queryClient.setQueryData<TaskModel[]>(['tasks'], (old) =>
-            [...(old ?? []), target].sort(
-              (a, b) =>
-                new Date(b.updatedAt).getTime() -
-                new Date(a.updatedAt).getTime(),
-            ),
-          );
+          queryClient.invalidateQueries(['tasks']);
         }
       },
+      retry: 5,
     },
   );
 

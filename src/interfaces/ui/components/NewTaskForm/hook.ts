@@ -37,9 +37,7 @@ export const useSubmitHandler = (value: string, callback: () => void) => {
         }
 
         if (!result.success) {
-          queryClient.setQueryData<TaskModel[]>(['tasks'], (tasks) =>
-            (tasks ?? []).filter((task) => task.id !== newTask.id),
-          );
+          queryClient.invalidateQueries(['tasks']);
           return;
         }
 
@@ -49,6 +47,7 @@ export const useSubmitHandler = (value: string, callback: () => void) => {
           ),
         );
       },
+      retry: 5,
     },
   );
 
