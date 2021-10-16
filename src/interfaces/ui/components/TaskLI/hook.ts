@@ -21,8 +21,6 @@ export const useChangeDoneHandler = (id: number, title: string) => {
       }),
     {
       onMutate: async (value) => {
-        await queryClient.cancelQueries(['tasks']);
-
         queryClient.setQueryData<TaskModel[]>(['tasks'], (old) => {
           if (!old) {
             return [];
@@ -37,9 +35,30 @@ export const useChangeDoneHandler = (id: number, title: string) => {
               : task,
           );
         });
+
+        return value;
       },
-      onError: (/* data, error, variables, context */) => {
-        queryClient.invalidateQueries(['tasks']);
+      onSuccess: async (result, _, value) => {
+        if (typeof value === 'undefined') {
+          return;
+        }
+
+        if (!result.success) {
+          queryClient.setQueryData<TaskModel[]>(['tasks'], (old) => {
+            if (!old) {
+              return [];
+            }
+
+            return old.map((task) =>
+              task.id === id
+                ? {
+                    ...task,
+                    done: !value,
+                  }
+                : task,
+            );
+          });
+        }
       },
     },
   );
@@ -60,14 +79,31 @@ export const useClickDeleteHandler = (id: number, title: string) => {
     async () => new RemoveTask(new TaskRepository(api)).execute(id),
     {
       onMutate: async () => {
-        await queryClient.cancelQueries(['tasks']);
+        const target = queryClient
+          .getQueryData<TaskModel[]>(['tasks'])
+          ?.find((task) => task.id === id);
 
-        queryClient.setQueryData<TaskModel[]>(['tasks'], (old) =>
-          old ? old.filter((task) => task.id !== id) : [],
+        queryClient.setQueryData<TaskModel[]>(
+          ['tasks'],
+          (old) => old?.filter((task) => task.id !== id) ?? [],
         );
+
+        return target;
       },
-      onError: (/* data, error, variables, context */) => {
-        queryClient.invalidateQueries(['tasks']);
+      onSuccess: async (result, _, target) => {
+        if (!target) {
+          return;
+        }
+
+        if (!result.success) {
+          queryClient.setQueryData<TaskModel[]>(['tasks'], (old) =>
+            [...(old ?? []), target].sort(
+              (a, b) =>
+                new Date(b.updatedAt).getTime() -
+                new Date(a.updatedAt).getTime(),
+            ),
+          );
+        }
       },
     },
   );
