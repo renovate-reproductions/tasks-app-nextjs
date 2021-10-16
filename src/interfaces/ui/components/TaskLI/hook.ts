@@ -21,6 +21,8 @@ export const useChangeDoneHandler = (id: number, title: string) => {
       }),
     {
       onMutate: async (value) => {
+        await queryClient.cancelQueries('todos');
+
         queryClient.setQueryData<TaskModel[]>(
           ['tasks'],
           (tasks) =>
@@ -59,6 +61,8 @@ export const useClickDeleteHandler = (id: number, title: string) => {
     async () => new RemoveTask(new TaskRepository(api)).execute(id),
     {
       onMutate: async () => {
+        await queryClient.cancelQueries('todos');
+
         queryClient.setQueryData<TaskModel[]>(
           ['tasks'],
           (tasks) => tasks?.filter((task) => task.id !== id) ?? [],

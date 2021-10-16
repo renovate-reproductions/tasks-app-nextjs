@@ -15,6 +15,8 @@ export const useSubmitHandler = (value: string, callback: () => void) => {
       new CreateTask(new TaskRepository(api)).execute(title),
     {
       onMutate: async (title: string) => {
+        await queryClient.cancelQueries('todos');
+
         const now = new Date();
         const newTask: TaskModel = {
           id: Math.random(),
