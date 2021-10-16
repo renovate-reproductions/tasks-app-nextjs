@@ -82,14 +82,14 @@
     "utility-types": "3.10.0"
   },
   "engines": {
-    "node": "14.x",
-    "npm": "7.x"
+    "node": "^14.x",
+    "npm": "^8.x"
   },
   "msw": {
     "workerDirectory": "storybook-public"
   },
   "volta": {
     "node": "14.18.1",
-    "npm": "8.0.0"
+    "npm": "8.1.0"
   }
 }
