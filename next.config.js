@@ -1,4 +1,6 @@
-/** @type {import('next/dist/next-server/server/config-shared').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const config = {
   experimental: {
     esmExternals: true,
@@ -7,7 +9,6 @@ const config = {
     ignoreDevErrors: true,
     ignoreBuildErrors: true,
   },
-  webpack5: true,
   compress: true,
   poweredByHeader: false,
 };
