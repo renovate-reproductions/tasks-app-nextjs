@@ -48,7 +48,7 @@
     "@types/eslint": "7.28.2",
     "@types/is-ci": "3.0.0",
     "@types/prettier": "^2.4.1",
-    "@types/react": "17.0.33",
+    "@types/react": "17.0.34",
     "@types/react-dom": "17.0.10",
     "@types/react-is": "17.0.3",
     "@types/styled-components": "5.1.15",
