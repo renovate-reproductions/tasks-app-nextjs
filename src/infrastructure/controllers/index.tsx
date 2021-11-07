@@ -3,19 +3,14 @@ import Head from 'next/head';
 import type { DehydratedState } from 'react-query';
 import { dehydrate, QueryClient } from 'react-query';
 
-import { ListTasks } from '../../application/usecases/list-tasks';
-import { api } from '../../interfaces/api';
-import { TaskRepository } from '../../interfaces/repositories/task-repository';
 import { Page } from '../../interfaces/ui/components/Page';
+import { fetchTasks, taskKeys } from '../../interfaces/ui/queries/tasks';
 
 export const getServerSideProps: GetServerSideProps<{
   dehydratedState: DehydratedState;
 }> = async () => {
   const queryClient = new QueryClient();
-  await queryClient.prefetchQuery(['tasks'], async () => {
-    const res = await new ListTasks(new TaskRepository(api)).execute();
-    return res.success ? res.data : [];
-  });
+  await queryClient.prefetchQuery(taskKeys.list(), fetchTasks);
 
   return {
     props: {

@@ -1,10 +1,8 @@
 import { memo } from 'react';
 import { useQuery } from 'react-query';
 
-import { ListTasks } from '../../../../application/usecases/list-tasks';
 import type { TaskModel } from '../../../../domain/models/task-model';
-import { api } from '../../../api';
-import { TaskRepository } from '../../../repositories/task-repository';
+import { fetchTasks, taskKeys } from '../../queries/tasks';
 import { TaskLI } from '../TaskLI';
 import * as Styled from './style';
 
@@ -41,18 +39,7 @@ export const View: React.VFC<Props> = (props) => (
 );
 
 export const TaskUList: React.VFC<ContainerProps> = (props) => {
-  const { isLoading, isError, data } = useQuery<TaskModel[]>(
-    ['tasks'],
-    async () => {
-      const res = await new ListTasks(new TaskRepository(api)).execute();
-
-      if (!res.success) {
-        throw res.error;
-      }
-
-      return res.data;
-    },
-  );
+  const { isLoading, isError, data } = useQuery(taskKeys.list(), fetchTasks);
 
   return (
     <View isLoading={isLoading} isError={isError} data={data} {...props} />

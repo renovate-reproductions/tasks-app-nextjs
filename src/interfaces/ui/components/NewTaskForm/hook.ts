@@ -2,56 +2,31 @@ import type { FormEvent } from 'react';
 import { useCallback } from 'react';
 import { useMutation, useQueryClient } from 'react-query';
 
-import { CreateTask } from '../../../../application/usecases/create-task';
 import type { TaskModel } from '../../../../domain/models/task-model';
-import { api } from '../../../api';
-import { TaskRepository } from '../../../repositories/task-repository';
+import { createTask, taskKeys } from '../../queries/tasks';
 
 export const useSubmitHandler = (value: string, callback: () => void) => {
   const queryClient = useQueryClient();
 
-  const { mutate } = useMutation(
-    async (title: string) =>
-      new CreateTask(new TaskRepository(api)).execute(title),
-    {
-      onMutate: async (title: string) => {
-        await queryClient.cancelQueries('todos');
-
-        const now = new Date().toISOString();
-        const newTask: TaskModel = {
+  const { mutate } = useMutation(createTask, {
+    onMutate: async (title: string) => {
+      await queryClient.cancelQueries(taskKeys.list());
+      queryClient.setQueryData<TaskModel[]>(taskKeys.list(), (old) => [
+        {
           id: Math.random(),
           title,
           done: false,
-          createdAt: now,
-          updatedAt: now,
-        };
-
-        queryClient.setQueryData<TaskModel[]>(['tasks'], (old) => [
-          newTask,
-          ...(old ?? []),
-        ]);
-
-        return newTask;
-      },
-      onSuccess: async (result, _, newTask) => {
-        if (!newTask) {
-          return;
-        }
-
-        if (!result.success) {
-          queryClient.invalidateQueries(['tasks']);
-          return;
-        }
-
-        queryClient.setQueryData<TaskModel[]>(['tasks'], (tasks) =>
-          (tasks ?? []).map((task) =>
-            task.id === newTask.id ? result.data : task,
-          ),
-        );
-      },
-      retry: 5,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        },
+        ...(old ?? []),
+      ]);
     },
-  );
+    onSettled: async () => {
+      queryClient.invalidateQueries(taskKeys.list());
+    },
+    retry: 5,
+  });
 
   return useCallback(
     (e: FormEvent<HTMLFormElement>) => {
