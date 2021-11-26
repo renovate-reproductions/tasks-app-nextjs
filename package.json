@@ -53,6 +53,7 @@
     "@types/styled-components": "5.1.15",
     "@types/stylelint": "13.13.3",
     "babel-loader": "^8.2.3",
+    "eslint": "^8.3.0",
     "eslint-config-next": "^12.0.4",
     "eslint-plugin-compat": "^4.0.0",
     "eslint-plugin-jest": "^25.2.4",
