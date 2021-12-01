@@ -13,7 +13,4 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
-  rules: {
-    '@typescript-eslint/no-invalid-this': 'off',
-  },
 };
