@@ -16,39 +16,43 @@ const Template: ComponentStory<typeof TaskUList> = (args) => (
 
 export const Default = Template.bind({});
 Default.parameters = {
-  msw: [
-    rest.get('*/api/v1/tasks', (req, res, ctx) =>
-      res(
-        ctx.delay(500),
-        ctx.status(200),
-        ctx.json<{ items: TaskModel[] }>({
-          items: [
-            {
-              id: 1,
-              createdAt: '2021-01-01 00:00',
-              updatedAt: '2021-01-01 00:00',
-              title: 'TODO_01',
-              done: false,
-            },
-            {
-              id: 2,
-              createdAt: '2021-01-01 00:00',
-              updatedAt: '2021-01-01 00:00',
-              title: 'TODO_02',
-              done: true,
-            },
-          ],
-        }),
+  msw: {
+    handlers: [
+      rest.get('*/api/v1/tasks', (req, res, ctx) =>
+        res(
+          ctx.delay(100),
+          ctx.status(200),
+          ctx.json<{ items: TaskModel[] }>({
+            items: [
+              {
+                id: 1,
+                createdAt: '2021-01-01 00:00',
+                updatedAt: '2021-01-01 00:00',
+                title: 'TODO_01',
+                done: false,
+              },
+              {
+                id: 2,
+                createdAt: '2021-01-01 00:00',
+                updatedAt: '2021-01-01 00:00',
+                title: 'TODO_02',
+                done: true,
+              },
+            ],
+          }),
+        ),
       ),
-    ),
-  ],
+    ],
+  },
 };
 
 export const Error = Template.bind({});
 Error.parameters = {
-  msw: [
-    rest.get('*/api/v1/tasks', (req, res, ctx) =>
-      res(ctx.delay(500), ctx.status(400), ctx.json({})),
-    ),
-  ],
+  msw: {
+    handlers: [
+      rest.get('*/api/v1/tasks', (req, res, ctx) =>
+        res(ctx.delay(100), ctx.status(400), ctx.json({})),
+      ),
+    ],
+  },
 };
