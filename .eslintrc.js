@@ -9,6 +9,7 @@ module.exports = {
     'plugin:jest-dom/recommended',
     'plugin:testing-library/dom',
     'plugin:testing-library/react',
+    'plugin:storybook/recommended',
   ],
   parserOptions: {
     project: './tsconfig.json',
