@@ -1,12 +1,11 @@
 module.exports = {
-  processors: ['stylelint-processor-styled-components'],
-  plugins: ['stylelint-a11y', 'stylelint-no-unsupported-browser-features'],
   extends: [
-    'stylelint-config-prettier',
-    'stylelint-config-styled-components',
     'stylelint-config-standard',
+    'stylelint-config-styled-components',
+    'stylelint-config-prettier',
     'stylelint-config-property-sort-order-smacss',
   ],
+  customSyntax: 'postcss-jsx',
   rules: {
     'no-empty-source': null,
     'declaration-colon-newline-after': null,
