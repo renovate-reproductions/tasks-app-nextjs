@@ -58,7 +58,6 @@ export const useClickDeleteHandler = (id: number, title: string) => {
   });
 
   return useCallback(() => {
-    // eslint-disable-next-line no-alert
     if (confirm(`Are you OK to delete "${title || 'NO TITLE'}"`)) {
       mutate(id);
     }
