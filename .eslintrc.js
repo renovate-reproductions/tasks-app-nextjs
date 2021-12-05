@@ -11,11 +11,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.@(test|spec).@(ts|tsx|js|jsx|mjs|cjs)'],
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: [
         'plugin:jest/recommended',
         'plugin:jest-dom/recommended',
-        'plugin:testing-library/dom',
         'plugin:testing-library/react',
       ],
       settings: {
