@@ -29,3 +29,5 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Lint
         run: yarn lint
+      - name: Jest
+        run: yarn jest
