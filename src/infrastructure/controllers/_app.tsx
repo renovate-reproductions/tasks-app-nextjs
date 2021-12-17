@@ -1,10 +1,13 @@
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 import type { DehydratedState } from 'react-query';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import { ThemeProvider } from 'styled-components';
+
+import { GlobalStyle } from '../../interfaces/ui/style/global';
+import { theme } from '../../interfaces/ui/style/theme';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type GetConstructorArgs<T> = T extends new (...args: infer U) => any
@@ -36,27 +39,16 @@ export const Provider: FC<{
           process.env.STORYBOOK !== 'true' && (
             <ReactQueryDevtools initialIsOpen={false} />
           )}
-        {props.children}
+
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
       </Hydrate>
     </QueryClientProvider>
   );
 };
 
 export const MyApp = ({ Component, pageProps }: AppProps) => (
-  <>
-    <Head>
-      <meta
-        name="viewport"
-        content={[
-          ['initial-scale', '1'],
-          ['width', 'device-width'],
-        ]
-          .map(([key, value]) => `${key}=${value}`)
-          .join(', ')}
-      />
-    </Head>
-    <Provider dehydratedState={pageProps.dehydratedState}>
-      <Component {...pageProps} />
-    </Provider>
-  </>
+  <Provider dehydratedState={pageProps.dehydratedState}>
+    <Component {...pageProps} />
+  </Provider>
 );
