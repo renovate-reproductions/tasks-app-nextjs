@@ -3,7 +3,7 @@
 [![Contiinuous Integration](https://github.com/macchiitaka/tasks-app-nextjs/actions/workflows/test.yml/badge.svg)](https://github.com/macchiitaka/tasks-app-nextjs/actions/workflows/test.yml)
 [![CodeQL](https://github.com/macchiitaka/tasks-app-nextjs/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/macchiitaka/tasks-app-nextjs/actions/workflows/codeql-analysis.yml)
 
-[Tasks] Web app using Next.js + TypeScript + React Query + MUI
+[Tasks] Web app using Next.js + TypeScript + React Query + styled-components.
 [Demo](https://tasks-app-nextjs.vercel.app/)
 
 ## Technologies
@@ -13,8 +13,8 @@
 - Web framework
   - [Next.js by Vercel - The React Framework](https://nextjs.org/)
   - [React – A JavaScript library for building user interfaces](https://reactjs.org/)
-- CSS Framework
-  - [MUI: The React component library you always wanted](https://mui.com/)
+- CSS
+  - [styled-components](https://styled-components.com/)
 - API client
   - [React Query - Hooks for fetching, caching and updating asynchronous data in React](https://react-query.tanstack.com/)
   - [axios/axios: Promise based HTTP client for the browser and node.js](https://github.com/axios/axios)
@@ -25,6 +25,7 @@
   - [EditorConfig](https://editorconfig.org/)
 - Linter
   - [ESLint - Pluggable JavaScript linter](https://eslint.org/)
+  - [A mighty, modern style linter · stylelint](https://stylelint.io/)
 - Git
   - [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/)
 - Paas

@@ -1,10 +1,10 @@
-import { List } from '@mui/material';
 import { memo } from 'react';
 import { useQuery } from 'react-query';
 
 import type { TaskModel } from '../../../../domain/models/task-model';
 import { fetchTasks, taskKeys } from '../../queries/tasks';
 import { TaskLI } from '../TaskLI';
+import * as Styled from './style';
 
 type ContainerProps = {};
 
@@ -28,11 +28,11 @@ export const View: React.VFC<Props> = (props) => (
       }
 
       return (
-        <List>
+        <Styled.UList>
           {props.data?.map((task) => (
             <TaskLIMemoized key={task.id} {...task} />
           ))}
-        </List>
+        </Styled.UList>
       );
     })()}
   </>
