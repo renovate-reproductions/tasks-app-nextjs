@@ -1,8 +1,8 @@
+import { Box, Button, TextField } from '@mui/material';
 import type { ChangeEvent, FormEvent } from 'react';
 import { useCallback, useState } from 'react';
 
 import { useSubmitHandler } from './hook';
-import * as Styled from './style';
 
 type ContainerProps = {};
 
@@ -11,23 +11,6 @@ type Props = {
   onChangeText(e: ChangeEvent<HTMLInputElement>): void;
   onSubmit(e: FormEvent<HTMLFormElement>): void;
 } & ContainerProps;
-
-export const View: React.VFC<Props> = (props) => (
-  <Styled.Form onSubmit={props.onSubmit}>
-    <Styled.Input
-      type="text"
-      name="task"
-      value={props.value}
-      required
-      maxLength={2 ** 16}
-      autoFocus
-      onChange={props.onChangeText}
-      placeholder="Add task"
-      aria-label="New task"
-    />
-    <Styled.Button type="submit">Add</Styled.Button>
-  </Styled.Form>
-);
 
 export const NewTaskForm: React.VFC<ContainerProps> = (props) => {
   const [value, setValue] = useState('');
@@ -51,3 +34,31 @@ export const NewTaskForm: React.VFC<ContainerProps> = (props) => {
     />
   );
 };
+
+export const View: React.VFC<Props> = (props) => (
+  <Box
+    component="form"
+    display="grid"
+    gridTemplateColumns="minmax(0, 1fr) max-content"
+    gap={2}
+    onSubmit={props.onSubmit}
+  >
+    <TextField
+      name="task"
+      label="New task"
+      value={props.value}
+      autoFocus
+      required
+      InputProps={{
+        inputProps: {
+          maxLength: 2 ** 16,
+        },
+      }}
+      size="small"
+      onChange={props.onChangeText}
+    />
+    <Button variant="contained" type="submit">
+      Add
+    </Button>
+  </Box>
+);
