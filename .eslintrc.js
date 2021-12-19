@@ -1,10 +1,8 @@
 module.exports = {
   root: true,
   extends: [
-    '@takamachi/eslint-config/presets/react-typescript-prettier',
     'next/core-web-vitals',
-    'plugin:react/jsx-runtime',
-    'plugin:compat/recommended',
+    '@takamachi/eslint-config/presets/react-typescript-prettier',
   ],
   parserOptions: {
     project: './tsconfig.json',
