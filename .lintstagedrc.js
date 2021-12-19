@@ -1,4 +1,6 @@
 module.exports = {
-  '**/*.{js,jsx,ts,tsx}': ['eslint'],
-  '**/*.{jsx,tsx}': ['stylelint'],
+  '*.@(ts|tsx)': 'bash -c tsc',
+  '*.@(js|ts|tsx)': 'eslint',
+  '*.test.@(js|ts|tsx)': 'jest',
+  '*.css': 'stylelint',
 };
