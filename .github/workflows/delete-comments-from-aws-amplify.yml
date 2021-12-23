@@ -1,0 +1,12 @@
+name: Delete noisy AWS Amplify comments
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  poof:
+    if: startsWith(github.event.comment.user.login, 'vercel ')
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh api -X DELETE '${{ github.event.comment.url }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
