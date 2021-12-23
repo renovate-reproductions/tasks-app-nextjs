@@ -4,6 +4,7 @@ on:
     types: [created]
 jobs:
   poof:
+#    if: startsWith(github.event.comment.user.login, 'vercel')
     if: startsWith(github.event.comment.user.login, 'vercel')
     runs-on: ubuntu-latest
     steps:
