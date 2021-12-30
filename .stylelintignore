@@ -1,3 +1,4 @@
 node_modules/
 !.*rc.js
 .next.js/
+storybook-static
