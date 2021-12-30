@@ -1,7 +1,8 @@
 export const theme = {
   color: {
-    black: 'rgba(0, 0, 0, 1)',
+    white: 'rgba(255, 255, 255, 1)',
     black70: 'rgba(0, 0, 0, 0.7)',
+    black: 'rgba(0, 0, 0, 1)',
   },
 } as const;
 

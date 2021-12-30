@@ -1,5 +1,5 @@
 import { NewTaskForm } from '../NewTaskForm';
-import { TaskUList } from '../TaskUList';
+import { TaskList } from '../TaskList';
 import * as Styled from './style';
 
 type ContainerProps = {};
@@ -11,7 +11,7 @@ export const View: React.VFC<Props> = () => (
     <h1>Tasks</h1>
     <NewTaskForm />
     <Styled.DivUListWrapper>
-      <TaskUList />
+      <TaskList />
     </Styled.DivUListWrapper>
   </Styled.Main>
 );

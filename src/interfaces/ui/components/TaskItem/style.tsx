@@ -34,5 +34,14 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  height: 32px;
+  padding: 8px 12px;
+  color: ${(props) => props.theme.color.black};
+  background-color: ${(props) => props.theme.color.white};
+  border: solid 1px ${(props) => props.theme.color.black};
+  cursor: pointer;
+
+  &:is(:hover, :focus) {
+    color: ${(props) => props.theme.color.white};
+    background-color: ${(props) => props.theme.color.black};
+  }
 `;

@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 
 import type { TaskModel } from '../../../../domain/models/task-model';
 import { fetchTasks, taskKeys } from '../../queries/tasks';
-import { TaskLI } from '../TaskLI';
+import { TaskItem } from '../TaskItem';
 import * as Styled from './style';
 
 type ContainerProps = {};
@@ -14,7 +14,7 @@ type Props = {
   data: TaskModel[] | undefined;
 } & ContainerProps;
 
-const TaskLIMemoized = memo(TaskLI);
+const TaskLIMemoized = memo(TaskItem);
 
 export const View: React.VFC<Props> = (props) => (
   <>
@@ -38,7 +38,7 @@ export const View: React.VFC<Props> = (props) => (
   </>
 );
 
-export const TaskUList: React.VFC<ContainerProps> = (props) => {
+export const TaskList: React.VFC<ContainerProps> = (props) => {
   const { isLoading, isError, data } = useQuery(taskKeys.list(), fetchTasks);
 
   return (

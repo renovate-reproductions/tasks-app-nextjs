@@ -2,16 +2,16 @@ import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { rest } from 'msw';
 
 import type { TaskModel } from '../../../../domain/models/task-model';
-import { TaskUList } from './component';
+import { TaskList } from './component';
 
-const meta: ComponentMeta<typeof TaskUList> = {
-  title: 'Component/TaskUList',
-  component: TaskUList,
+const meta: ComponentMeta<typeof TaskList> = {
+  title: 'Component/TaskList',
+  component: TaskList,
 };
 export default meta;
 
-const Template: ComponentStory<typeof TaskUList> = (args) => (
-  <TaskUList {...args} />
+const Template: ComponentStory<typeof TaskList> = (args) => (
+  <TaskList {...args} />
 );
 
 export const Default = Template.bind({});

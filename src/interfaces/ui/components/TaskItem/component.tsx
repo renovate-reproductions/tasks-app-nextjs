@@ -30,7 +30,7 @@ export const View: React.VFC<Props> = (props) => {
   );
 };
 
-export const TaskLI: React.VFC<ContainerProps> = (props) => {
+export const TaskItem: React.VFC<ContainerProps> = (props) => {
   const handleChangeDone = useChangeDoneHandler(props.id, props.title);
   const handleClickDelete = useClickDeleteHandler(props.id, props.title);
 

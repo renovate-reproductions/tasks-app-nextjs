@@ -3,7 +3,7 @@ import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { View } from './component';
 
 const meta: ComponentMeta<typeof View> = {
-  title: 'Component/TaskLI',
+  title: 'Component/TaskItem',
   component: View,
   args: {
     id: 1,
