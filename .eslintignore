@@ -6,4 +6,5 @@
 *.d.ts
 /src/aws-exports.js
 /storybook-public
+/storybook-static
 /jest.setup.ts
