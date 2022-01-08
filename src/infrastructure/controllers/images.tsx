@@ -38,7 +38,6 @@ export const Images: React.VFC = () => {
     <>
       <Head>
         <title>Images</title>
-        <link href={images[getNextIndex(index)]} as="image" rel="preload" />
       </Head>
       <Image
         src={images[index]}
