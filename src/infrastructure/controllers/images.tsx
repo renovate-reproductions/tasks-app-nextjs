@@ -35,8 +35,19 @@ export const Images: React.VFC = () => {
     <>
       <Head>
         <title>Images</title>
+        <link
+          href={images[index + 1 > images.length - 1 ? 0 : index + 1]}
+          as="image"
+          rel="preload"
+        />
       </Head>
-      <Image src={images[index]} alt="" layout="fill" objectFit="cover" />
+      <Image
+        src={images[index]}
+        alt=""
+        layout="fill"
+        objectFit="cover"
+        loading="eager"
+      />
       <Link href={pagesPath.tasks.$url()} passHref>
         <StyledLink>
           <StyledTime dateTime={date.toISOString()}>
