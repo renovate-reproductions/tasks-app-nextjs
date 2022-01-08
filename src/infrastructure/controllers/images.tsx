@@ -10,13 +10,16 @@ const images = Object.values(staticPath.images).filter((path) =>
   path.endsWith('.jpg'),
 );
 
+const getNextIndex = (crr: number) =>
+  crr + 1 > images.length - 1 ? 0 : crr + 1;
+
 export const Images: React.VFC = () => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(() => getNextIndex(Date.now()));
   const [now, setNow] = useState(0);
 
   useEffect(() => {
     const indexIntervalId = setInterval(() => {
-      setIndex((crr) => (crr + 1 > images.length - 1 ? 0 : crr + 1));
+      setIndex(getNextIndex);
     }, 5_000);
 
     const nowIntervalId = setInterval(() => {
@@ -35,11 +38,7 @@ export const Images: React.VFC = () => {
     <>
       <Head>
         <title>Images</title>
-        <link
-          href={images[index + 1 > images.length - 1 ? 0 : index + 1]}
-          as="image"
-          rel="preload"
-        />
+        <link href={images[getNextIndex(index)]} as="image" rel="preload" />
       </Head>
       <Image
         src={images[index]}
