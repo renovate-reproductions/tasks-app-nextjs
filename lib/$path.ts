@@ -1,6 +1,9 @@
 /* eslint-disable */
 // prettier-ignore
 export const pagesPath = {
+  tasks: {
+    $url: (url?: { hash?: string }) => ({ pathname: '/tasks' as const, hash: url?.hash })
+  },
   $url: (url?: { hash?: string }) => ({ pathname: '/' as const, hash: url?.hash })
 }
 

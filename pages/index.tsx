@@ -1,4 +1,1 @@
-export {
-  Index as default,
-  getServerSideProps,
-} from '../src/infrastructure/controllers';
+export { Images as default } from '../src/infrastructure/controllers/images';
