@@ -15,7 +15,7 @@ const getNextIndex = (crr: number) =>
 
 export const Images: React.VFC = () => {
   const [index, setIndex] = useState(() => getNextIndex(Date.now()));
-  const [now, setNow] = useState(0);
+  const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
     const indexIntervalId = setInterval(() => {
