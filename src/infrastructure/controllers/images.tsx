@@ -14,9 +14,7 @@ const getNextIndex = (crr: number) =>
   crr + 1 > images.length - 1 ? 0 : crr + 1;
 
 export const Images: React.VFC = () => {
-  const [index, setIndex] = useState(() =>
-    getNextIndex(Date.now() % images.length),
-  );
+  const [index, setIndex] = useState(() => Date.now() % (images.length - 1));
   const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
@@ -40,6 +38,16 @@ export const Images: React.VFC = () => {
     <>
       <Head>
         <title>Images</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <Image
         src={images[index]}
@@ -49,7 +57,8 @@ export const Images: React.VFC = () => {
         loading="eager"
       />
       <Link href={pagesPath.tasks.$url()} passHref>
-        <StyledLink>
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        <a>
           <StyledTime dateTime={date.toISOString()}>
             {new Intl.DateTimeFormat('en-US', {
               year: 'numeric',
@@ -60,15 +69,14 @@ export const Images: React.VFC = () => {
               second: '2-digit',
             }).format(date)}
           </StyledTime>
-        </StyledLink>
+        </a>
       </Link>
     </>
   );
 };
 
-const StyledLink = styled.a``;
-
 const StyledTime = styled.time`
+  font-family: 'Fjalla One', sans-serif;
   font-size: 8vw;
   color: white;
   text-align: center;
