@@ -15,6 +15,7 @@ export const staticPath = {
   _DS_Store: '/.DS_Store',
   favicon_ico: '/favicon.ico',
   images: {
+    _DS_Store: '/images/.DS_Store',
     hussain_faruhaan_XOEL0hNDub0_unsplash_jpg: '/images/hussain-faruhaan-XOEL0hNDub0-unsplash.jpg',
     jake_allison_MNspPBIcWbo_unsplash_jpg: '/images/jake-allison-MNspPBIcWbo-unsplash.jpg',
     joao_marcelo_martins_hFoPRRwjVgg_unsplash_jpg: '/images/joao-marcelo-martins-hFoPRRwjVgg-unsplash.jpg',
