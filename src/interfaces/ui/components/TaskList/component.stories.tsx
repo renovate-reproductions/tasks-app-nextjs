@@ -1,7 +1,10 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import { rest } from 'msw';
+import { userEvent, within } from '@storybook/testing-library';
 
-import type { TaskModel } from '../../../../domain/models/task-model';
+import {
+  getFetchTasksErrorHandlers,
+  getFetchTasksHandlers,
+} from '../../../../../msw/handlers';
 import { TaskList } from './component';
 
 const meta: ComponentMeta<typeof TaskList> = {
@@ -17,42 +20,25 @@ const Template: ComponentStory<typeof TaskList> = (args) => (
 export const Default = Template.bind({});
 Default.parameters = {
   msw: {
-    handlers: [
-      rest.get('*/api/v1/tasks', (req, res, ctx) =>
-        res(
-          ctx.delay(100),
-          ctx.status(200),
-          ctx.json<{ items: TaskModel[] }>({
-            items: [
-              {
-                id: 1,
-                createdAt: '2021-01-01 00:00',
-                updatedAt: '2021-01-01 00:00',
-                title: 'TODO_01',
-                done: false,
-              },
-              {
-                id: 2,
-                createdAt: '2021-01-01 00:00',
-                updatedAt: '2021-01-01 00:00',
-                title: 'TODO_02',
-                done: true,
-              },
-            ],
-          }),
-        ),
-      ),
-    ],
+    handlers: [getFetchTasksHandlers()],
   },
 };
 
 export const Error = Template.bind({});
 Error.parameters = {
   msw: {
-    handlers: [
-      rest.get('*/api/v1/tasks', (req, res, ctx) =>
-        res(ctx.delay(100), ctx.status(400), ctx.json({})),
-      ),
-    ],
+    handlers: [getFetchTasksErrorHandlers()],
   },
+};
+
+export const ClickFirstCheckbox = Template.bind({});
+ClickFirstCheckbox.parameters = {
+  msw: {
+    handlers: [getFetchTasksHandlers()],
+  },
+};
+ClickFirstCheckbox.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  const checkbox = await canvas.findByRole('checkbox', { name: 'TODO_01' });
+  await userEvent.click(checkbox);
 };
