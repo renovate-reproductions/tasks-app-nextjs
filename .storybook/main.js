@@ -13,7 +13,7 @@ module.exports = {
   },
   typescript: {
     check: false,
-    // reactDocgen: false,
+    reactDocgen: false,
   },
   reactOptions: {
     fastRefresh: true,
