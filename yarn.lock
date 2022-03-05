@@ -5522,20 +5522,6 @@ css-loader@^5.0.1:
     schema-utils "^3.0.0"
     semver "^7.3.5"
 
-css-loader@^6.5.1:
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-6.6.0.tgz#c792ad5510bd1712618b49381bd0310574fafbd3"
-  integrity sha512-FK7H2lisOixPT406s5gZM1S3l8GrfhEBT3ZiL2UX1Ng1XWs0y2GPllz/OTyvbaHe12VgQrIXIzuEGVlbUhodqg==
-  dependencies:
-    icss-utils "^5.1.0"
-    postcss "^8.4.5"
-    postcss-modules-extract-imports "^3.0.0"
-    postcss-modules-local-by-default "^4.0.0"
-    postcss-modules-scope "^3.0.0"
-    postcss-modules-values "^4.0.0"
-    postcss-value-parser "^4.2.0"
-    semver "^7.3.5"
-
 css-property-sort-order-smacss@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/css-property-sort-order-smacss/-/css-property-sort-order-smacss-2.2.0.tgz#c2cb4741e5580fe2f6d968ccde0946e8b689033c"
@@ -10797,7 +10783,7 @@ postcss@^7.0.14, postcss@^7.0.26, postcss@^7.0.32, postcss@^7.0.36, postcss@^7.0
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.2.14, postcss@^8.2.15, postcss@^8.3.11, postcss@^8.4.5, postcss@^8.4.6, postcss@^8.4.7:
+postcss@^8.2.14, postcss@^8.2.15, postcss@^8.3.11, postcss@^8.4.6, postcss@^8.4.7:
   version "8.4.7"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.7.tgz#f99862069ec4541de386bf57f5660a6c7a0875a8"
   integrity sha512-L9Ye3r6hkkCeOETQX6iOaWZgjp3LL6Lpqm6EtgbKrgqGGteRMNb9vzBfRL96YOSu8o7x3MfIH9Mo5cPJFGrW6A==
@@ -12193,20 +12179,18 @@ store2@^2.12.0:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.13.1.tgz#fae7b5bb9d35fc53dc61cd262df3abb2f6e59022"
   integrity sha512-iJtHSGmNgAUx0b/MCS6ASGxb//hGrHHRgzvN+K5bvkBTN7A9RTpPSf1WSp+nPGvWCJ1jRnvY7MKnuqfoi3OEqg==
 
-storybook-addon-next@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/storybook-addon-next/-/storybook-addon-next-1.6.0.tgz#ac3a9bb371f0d9165dd88b34d03d8ad94f0e97f4"
-  integrity sha512-TqsfKxMyPth0iacngd3oQM1Ka1sZNzWzMqhXsckfP4U+J+zotxELblXcXBTTjQZyGRnk1JFideY0JSpVLPO9SA==
+storybook-addon-next@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/storybook-addon-next/-/storybook-addon-next-1.6.1.tgz#f72da2b3ade61c9bd287825619ceacdf2d38aec5"
+  integrity sha512-n2Ssx7WOl5wlKucQXfVS9e8s+zonqBrxLEfFZ1WQLIvHWsfl8+od8xMSezXDSYwMiij40gkdqEa7v9Z2mpPQ9Q==
   dependencies:
     "@storybook/addons" "^6.4.10"
-    css-loader "^6.5.1"
     image-size "^1.0.0"
     loader-utils "^3.2.0"
     postcss-loader "^6.2.1"
     resolve-url-loader "^5.0.0"
     sass-loader "^12.4.0"
     semver "^7.3.5"
-    style-loader "^3.3.1"
 
 stream-browserify@^2.0.1:
   version "2.0.2"
@@ -12422,11 +12406,6 @@ style-loader@^2.0.0:
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
-
-style-loader@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-3.3.1.tgz#057dfa6b3d4d7c7064462830f9113ed417d38575"
-  integrity sha512-GPcQ+LDJbrcxHORTRes6Jy2sfvK2kS6hpSfI/fXhPt+spVzxF6LJ1dHLN9zIGmVaaP044YKaIatFaufENRiDoQ==
 
 style-search@^0.1.0:
   version "0.1.0"
