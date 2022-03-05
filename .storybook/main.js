@@ -18,4 +18,7 @@ module.exports = {
   reactOptions: {
     fastRefresh: true,
   },
+  features: {
+    interactionsDebugger: true,
+  },
 };

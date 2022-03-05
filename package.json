@@ -23,7 +23,8 @@
     "test": "jest --watch",
     "start": "next start",
     "storybook": "start-storybook -p 6006 -s storybook-public",
-    "build-storybook": "build-storybook -s storybook-public"
+    "build-storybook": "build-storybook -s storybook-public",
+    "test-storybook": "test-storybook"
   },
   "resolutions": {
     "browserslist": "^4.19.3",
@@ -50,9 +51,11 @@
     "@storybook/addons": "6.5.0-alpha.45",
     "@storybook/builder-webpack5": "^6.5.0-alpha.45",
     "@storybook/client-api": "6.5.0-alpha.45",
+    "@storybook/jest": "^0.0.9",
     "@storybook/manager-webpack5": "^6.5.0-alpha.45",
     "@storybook/preview-web": "6.5.0-alpha.45",
     "@storybook/react": "^6.5.0-alpha.45",
+    "@storybook/test-runner": "^0.0.4",
     "@storybook/testing-library": "^0.0.9",
     "@storybook/testing-react": "^1.2.3",
     "@takamachi/eslint-config": "^2.6.0",
