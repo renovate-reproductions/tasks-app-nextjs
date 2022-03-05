@@ -1,5 +1,3 @@
-/* eslint-disable */
-// prettier-ignore
 export const pagesPath = {
   tasks: {
     $url: (url?: { hash?: string }) => ({ pathname: '/tasks' as const, hash: url?.hash })
@@ -7,10 +5,8 @@ export const pagesPath = {
   $url: (url?: { hash?: string }) => ({ pathname: '/' as const, hash: url?.hash })
 }
 
-// prettier-ignore
 export type PagesPath = typeof pagesPath
 
-// prettier-ignore
 export const staticPath = {
   _DS_Store: '/.DS_Store',
   favicon_ico: '/favicon.ico',
@@ -24,5 +20,4 @@ export const staticPath = {
   }
 } as const
 
-// prettier-ignore
 export type StaticPath = typeof staticPath
