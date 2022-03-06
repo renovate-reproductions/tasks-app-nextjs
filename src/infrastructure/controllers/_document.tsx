@@ -35,6 +35,16 @@ export class MyDocument extends Document {
       <Html lang="en-US">
         <Head>
           <meta name="Description" content="Tasks" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
