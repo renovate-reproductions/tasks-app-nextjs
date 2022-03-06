@@ -3,7 +3,7 @@ on: [push, pull_request]
 
 jobs:
   test:
-    name: Test
+    name: on ${{ matrix.os }} (${{ matrix.shard }})
     strategy:
       matrix:
         os: [
@@ -11,6 +11,7 @@ jobs:
             # windows-latest,
             # macos-latest
           ]
+        shard: ['1/2', '2/2']
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
@@ -31,5 +32,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Get number of CPU cores
+        id: cpu-cores
+        uses: SimenB/github-actions-cpu-cores@v1
       - name: Test
-        run: yarn jest
+        run: yarn jest --max-workers=${{ steps.cpu-cores.outputs.count }} --shard=${{ matrix.shard }}
