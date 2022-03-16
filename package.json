@@ -42,7 +42,7 @@
     "styled-normalize": "8.0.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
+    "@babel/core": "^7.17.7",
     "@storybook/addon-a11y": "^6.5.0-alpha.47",
     "@storybook/addon-actions": "^6.5.0-alpha.47",
     "@storybook/addon-essentials": "^6.5.0-alpha.47",
