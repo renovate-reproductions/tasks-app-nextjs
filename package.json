@@ -120,7 +120,7 @@
     "workerDirectory": "storybook-public"
   },
   "volta": {
-    "node": "16.14.0",
+    "node": "16.14.1",
     "yarn": "1.22.17"
   }
 }
