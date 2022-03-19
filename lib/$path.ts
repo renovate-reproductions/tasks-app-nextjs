@@ -1,4 +1,7 @@
 export const pagesPath = {
+  css_containment: {
+    $url: (url?: { hash?: string }) => ({ pathname: '/css-containment' as const, hash: url?.hash })
+  },
   dvh: {
     $url: (url?: { hash?: string }) => ({ pathname: '/dvh' as const, hash: url?.hash })
   },
