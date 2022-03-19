@@ -1,6 +1,21 @@
 export const pagesPath = {
+  dvh: {
+    $url: (url?: { hash?: string }) => ({ pathname: '/dvh' as const, hash: url?.hash })
+  },
+  height: {
+    $url: (url?: { hash?: string }) => ({ pathname: '/height' as const, hash: url?.hash })
+  },
+  lvh: {
+    $url: (url?: { hash?: string }) => ({ pathname: '/lvh' as const, hash: url?.hash })
+  },
+  svh: {
+    $url: (url?: { hash?: string }) => ({ pathname: '/svh' as const, hash: url?.hash })
+  },
   tasks: {
     $url: (url?: { hash?: string }) => ({ pathname: '/tasks' as const, hash: url?.hash })
+  },
+  vh: {
+    $url: (url?: { hash?: string }) => ({ pathname: '/vh' as const, hash: url?.hash })
   },
   $url: (url?: { hash?: string }) => ({ pathname: '/' as const, hash: url?.hash })
 }
