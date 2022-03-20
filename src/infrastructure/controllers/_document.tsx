@@ -45,6 +45,11 @@ export class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
             rel="stylesheet"
           />
+          <script
+            defer
+            data-domain="macchiitaka.dev"
+            src="https://plausible.io/js/plausible.js"
+          />
         </Head>
         <body>
           <Main />
