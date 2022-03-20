@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import type { FC } from 'react';
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import type { DehydratedState } from 'react-query';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
@@ -47,8 +47,57 @@ export const Provider: FC<{
   );
 };
 
-export const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Provider dehydratedState={pageProps.dehydratedState}>
-    <Component {...pageProps} />
-  </Provider>
-);
+const allowTracking = async () => true;
+
+const fetchPlausibleOptions = async () => {
+  const res = await fetch('/api/plausible-options');
+  return (await res.json()) as {
+    enabled?: boolean;
+    trackLocalhost?: boolean;
+    domain?: Location['hostname'];
+    apiHost?: string;
+  };
+};
+
+const useTracker = () => {
+  useEffect(() => {
+    let destructed = false;
+    let cleanup: (() => void) | null = null;
+
+    (async () => {
+      if (!(await allowTracking())) {
+        return;
+      }
+
+      const { enabled, ...plausibleOptions } = await fetchPlausibleOptions();
+
+      if (!enabled) {
+        return;
+      }
+
+      const plausible = await import('plausible-tracker');
+
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+      if (destructed) {
+        return;
+      }
+
+      cleanup = plausible.default(plausibleOptions).enableAutoPageviews();
+    })();
+
+    return () => {
+      destructed = true;
+      cleanup?.();
+    };
+  }, []);
+};
+
+export const MyApp = ({ Component, pageProps }: AppProps) => {
+  useTracker();
+
+  return (
+    <Provider dehydratedState={pageProps.dehydratedState}>
+      <Component {...pageProps} />
+    </Provider>
+  );
+};
