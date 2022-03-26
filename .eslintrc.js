@@ -1,8 +1,8 @@
 module.exports = {
   root: true,
   extends: [
-    'next/core-web-vitals',
     '@takamachi/eslint-config/presets/react-typescript-prettier',
+    'next/core-web-vitals',
   ],
   parserOptions: {
     project: './tsconfig.json',
