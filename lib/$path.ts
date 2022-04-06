@@ -1,23 +1,23 @@
 export const pagesPath = {
-  css_containment: {
+  "css_containment": {
     $url: (url?: { hash?: string }) => ({ pathname: '/css-containment' as const, hash: url?.hash })
   },
-  dvh: {
+  "dvh": {
     $url: (url?: { hash?: string }) => ({ pathname: '/dvh' as const, hash: url?.hash })
   },
-  height: {
+  "height": {
     $url: (url?: { hash?: string }) => ({ pathname: '/height' as const, hash: url?.hash })
   },
-  lvh: {
+  "lvh": {
     $url: (url?: { hash?: string }) => ({ pathname: '/lvh' as const, hash: url?.hash })
   },
-  svh: {
+  "svh": {
     $url: (url?: { hash?: string }) => ({ pathname: '/svh' as const, hash: url?.hash })
   },
-  tasks: {
+  "tasks": {
     $url: (url?: { hash?: string }) => ({ pathname: '/tasks' as const, hash: url?.hash })
   },
-  vh: {
+  "vh": {
     $url: (url?: { hash?: string }) => ({ pathname: '/vh' as const, hash: url?.hash })
   },
   $url: (url?: { hash?: string }) => ({ pathname: '/' as const, hash: url?.hash })
