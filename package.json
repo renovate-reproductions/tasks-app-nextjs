@@ -70,7 +70,7 @@
     "@types/is-ci": "3.0.0",
     "@types/node": "^16.11.26",
     "@types/prettier": "2.4.4",
-    "@types/react": "18.0.0",
+    "@types/react": "18.0.1",
     "@types/react-dom": "18.0.0",
     "@types/react-is": "17.0.3",
     "@types/react-test-renderer": "^17.0.1",
