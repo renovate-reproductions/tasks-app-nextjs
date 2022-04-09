@@ -13,7 +13,7 @@ const images = Object.values(staticPath.images).filter((path) =>
 const getNextIndex = (crr: number) =>
   crr + 1 > images.length - 1 ? 0 : crr + 1;
 
-export const Images: React.VFC = () => {
+export const Images: React.FC = () => {
   const [index, setIndex] = useState(() => Date.now() % (images.length - 1));
   const [now, setNow] = useState(() => Date.now());
 

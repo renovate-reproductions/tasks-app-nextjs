@@ -11,7 +11,7 @@ type Props = {
   onClickDelete(): void;
 } & ContainerProps;
 
-export const View: React.VFC<Props> = (props) => {
+export const View: React.FC<Props> = (props) => {
   const id = `item_${props.id}`;
 
   return (
@@ -30,7 +30,7 @@ export const View: React.VFC<Props> = (props) => {
   );
 };
 
-export const TaskItem: React.VFC<ContainerProps> = (props) => {
+export const TaskItem: React.FC<ContainerProps> = (props) => {
   const handleChangeDone = useChangeDoneHandler(props.id, props.title);
   const handleClickDelete = useClickDeleteHandler(props.id, props.title);
 

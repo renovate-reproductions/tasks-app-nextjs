@@ -14,10 +14,12 @@ type GetConstructorArgs<T> = T extends new (...args: infer U) => any
   ? U
   : never;
 
-export const Provider: FC<{
-  queryClientConfig?: GetConstructorArgs<typeof QueryClient>[0];
-  dehydratedState?: DehydratedState;
-}> = (props) => {
+export const Provider: FC<
+  React.PropsWithChildren<{
+    queryClientConfig?: GetConstructorArgs<typeof QueryClient>[0];
+    dehydratedState?: DehydratedState;
+  }>
+> = (props) => {
   const queryClient = useMemo(
     () =>
       new QueryClient(

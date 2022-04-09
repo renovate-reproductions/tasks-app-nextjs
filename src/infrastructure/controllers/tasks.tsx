@@ -19,7 +19,7 @@ export const getServerSideProps: GetServerSideProps<{
   };
 };
 
-export const Tasks: React.VFC<{
+export const Tasks: React.FC<{
   dehydratedState: DehydratedState;
 }> = () => (
   <>

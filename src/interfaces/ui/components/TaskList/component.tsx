@@ -16,7 +16,7 @@ type Props = {
 
 const TaskLIMemoized = memo(TaskItem);
 
-export const View: React.VFC<Props> = (props) => (
+export const View: React.FC<Props> = (props) => (
   <>
     {(() => {
       if (props.isLoading) {
@@ -38,7 +38,7 @@ export const View: React.VFC<Props> = (props) => (
   </>
 );
 
-export const TaskList: React.VFC<ContainerProps> = (props) => {
+export const TaskList: React.FC<ContainerProps> = (props) => {
   const { isLoading, isError, data } = useQuery(taskKeys.list(), fetchTasks);
 
   return (

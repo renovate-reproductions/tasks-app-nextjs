@@ -12,7 +12,7 @@ type Props = {
   onSubmit(e: FormEvent<HTMLFormElement>): void;
 } & ContainerProps;
 
-export const View: React.VFC<Props> = (props) => (
+export const View: React.FC<Props> = (props) => (
   <Styled.Form onSubmit={props.onSubmit}>
     <Styled.Input
       type="text"
@@ -29,7 +29,7 @@ export const View: React.VFC<Props> = (props) => (
   </Styled.Form>
 );
 
-export const NewTaskForm: React.VFC<ContainerProps> = (props) => {
+export const NewTaskForm: React.FC<ContainerProps> = (props) => {
   const [value, setValue] = useState('');
 
   const handleChangeText = useCallback((e: ChangeEvent<HTMLInputElement>) => {

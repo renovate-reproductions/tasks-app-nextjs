@@ -2,7 +2,7 @@ import { NewTaskForm } from '../NewTaskForm';
 import { TaskList } from '../TaskList';
 import * as Styled from './style';
 
-export const View: React.VFC = () => (
+export const View: React.FC = () => (
   <Styled.Main>
     <h1>Tasks</h1>
     <NewTaskForm />
@@ -12,4 +12,4 @@ export const View: React.VFC = () => (
   </Styled.Main>
 );
 
-export const Page: React.VFC = (props) => <View {...props} />;
+export const Page: React.FC = (props) => <View {...props} />;
