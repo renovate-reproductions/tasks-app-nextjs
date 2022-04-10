@@ -31,3 +31,9 @@ export const Done = Template.bind({});
 Done.args = {
   done: true,
 };
+
+export const Sample = Template.bind({});
+Sample.args = {
+  done: true,
+  title: 'sample',
+};
