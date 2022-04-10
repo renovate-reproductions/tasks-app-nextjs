@@ -24,8 +24,7 @@
     "start": "next start",
     "storybook": "start-storybook -p 6006 -s storybook-public",
     "build-storybook": "build-storybook -s storybook-public",
-    "test-storybook": "test-storybook",
-    "chromatic": "npx chromatic --project-token=02ee10d4b5d4"
+    "test-storybook": "test-storybook"
   },
   "resolutions": {
     "browserslist": "^4.20.2",
