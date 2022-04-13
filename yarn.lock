@@ -2964,10 +2964,10 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/test-runner@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@storybook/test-runner/-/test-runner-0.0.5.tgz#ae3ec02fe82258802503b91174087c28d1c79781"
-  integrity sha512-Q3m000gpjkd4YdD3PBarx8YCU1M5AtMr9y0oUAnpb1sIJpzZerdpdT1lb+eg0x+YHCyWif3nffMK+sAzA66BtA==
+"@storybook/test-runner@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/test-runner/-/test-runner-0.0.6.tgz#8cb06cf6cec1dbee54e9ec087024761aa811740c"
+  integrity sha512-KY7Hfjmie+mb/iQ1HhYIfxOsWqIJEQ9S+lKkA83IYrmTTNo1C3GN9aCh+hLcGYkC366DllMVg30D9An/i4JYOw==
   dependencies:
     "@storybook/core-common" "^6.4.14"
     "@storybook/csf" "0.0.2--canary.87bc651.0"
