@@ -59,7 +59,7 @@
     "@storybook/test-runner": "^0.0.6",
     "@storybook/testing-library": "^0.0.9",
     "@storybook/testing-react": "^1.2.4",
-    "@takamachi/eslint-config": "^2.6.8",
+    "@takamachi/eslint-config": "^2.6.9",
     "@takamachi/prettier-config": "^1.1.0",
     "@testing-library/dom": "^8.13.0",
     "@testing-library/jest-dom": "^5.16.4",
