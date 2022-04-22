@@ -3027,10 +3027,10 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/test-runner@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@storybook/test-runner/-/test-runner-0.0.6.tgz#8cb06cf6cec1dbee54e9ec087024761aa811740c"
-  integrity sha512-KY7Hfjmie+mb/iQ1HhYIfxOsWqIJEQ9S+lKkA83IYrmTTNo1C3GN9aCh+hLcGYkC366DllMVg30D9An/i4JYOw==
+"@storybook/test-runner@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@storybook/test-runner/-/test-runner-0.0.7.tgz#f4b55a935589277ddb50d428a513715fdf79ec82"
+  integrity sha512-FkjzKqssl11darMkvKbMCg6vv98mhL+BaD08hhlkdy7YlYjQMNBWjUFWsjj2OiVkXrrDSZrWGxw0DRnTvX6eow==
   dependencies:
     "@storybook/core-common" "^6.4.14"
     "@storybook/csf" "0.0.2--canary.87bc651.0"
