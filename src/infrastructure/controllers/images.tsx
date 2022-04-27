@@ -40,7 +40,7 @@ export const Images: React.FC = () => {
         <title>Images</title>
       </Head>
       <Image
-        src={images[index]}
+        src={images[index] ?? ''}
         alt=""
         layout="fill"
         objectFit="cover"

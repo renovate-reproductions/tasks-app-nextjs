@@ -25,7 +25,7 @@ export const useChangeDoneHandler = (id: number, title: string) => {
           ) ?? [],
       );
     },
-    onSettled: async (result) => {
+    onSettled: async (_) => {
       queryClient.invalidateQueries(taskKeys.list());
     },
     retry: 5,

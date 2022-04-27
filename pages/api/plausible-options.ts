@@ -7,7 +7,7 @@ type Body = {
   apiHost?: string; // use self-hosted or proxy
 };
 
-const handler = (req: NextApiRequest, res: NextApiResponse) => {
+const handler = (_: NextApiRequest, res: NextApiResponse) => {
   const body: Body = {
     enabled: true,
     domain: 'demo.macchiitaka.dev',

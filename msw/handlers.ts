@@ -29,7 +29,7 @@ export const getFetchTaskHandlers = () =>
   });
 
 export const getFetchTasksHandlers = () =>
-  rest.get('*/api/v1/tasks', (req, res, ctx) =>
+  rest.get('*/api/v1/tasks', (_, res, ctx) =>
     res(
       ctx.status(200),
       ctx.json<{ items: TaskModel[] }>({
@@ -39,6 +39,6 @@ export const getFetchTasksHandlers = () =>
   );
 
 export const getFetchTasksErrorHandlers = () =>
-  rest.get('*/api/v1/tasks', (req, res, ctx) =>
+  rest.get('*/api/v1/tasks', (_, res, ctx) =>
     res(ctx.status(400), ctx.json({})),
   );
