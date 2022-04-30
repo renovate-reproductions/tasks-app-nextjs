@@ -103,7 +103,7 @@
     "sleep-promise": "^9.1.0",
     "sort-package-json": "1.55.0",
     "storybook-addon-next": "^1.6.2",
-    "stylelint": "14.7.1",
+    "stylelint": "14.8.1",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-property-sort-order-smacss": "9.0.0",
     "stylelint-config-standard": "25.0.0",
