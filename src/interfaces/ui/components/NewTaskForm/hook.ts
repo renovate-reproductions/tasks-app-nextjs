@@ -22,9 +22,7 @@ export const useSubmitHandler = (value: string, callback: () => void) => {
         ...(old ?? []),
       ]);
     },
-    onSettled: async () => {
-      queryClient.invalidateQueries(taskKeys.list());
-    },
+    onSettled: async () => queryClient.invalidateQueries(taskKeys.list()),
     retry: 5,
   });
 

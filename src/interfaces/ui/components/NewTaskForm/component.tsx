@@ -12,16 +12,17 @@ type Props = {
   onSubmit(e: FormEvent<HTMLFormElement>): void;
 } & ContainerProps;
 
-export const View: React.FC<Props> = (props) => (
-  <Styled.Form onSubmit={props.onSubmit}>
+export const View: React.FC<Props> = ({ value, onChangeText, onSubmit }) => (
+  <Styled.Form onSubmit={onSubmit}>
     <Styled.Input
       type="text"
       name="task"
-      value={props.value}
+      value={value}
       required
       maxLength={2 ** 16}
+      // eslint-disable-next-line jsx-a11y/no-autofocus
       autoFocus
-      onChange={props.onChangeText}
+      onChange={onChangeText}
       placeholder="Add task"
       aria-label="New task"
     />

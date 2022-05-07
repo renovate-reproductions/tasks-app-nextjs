@@ -9,7 +9,6 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../../interfaces/ui/style/global';
 import { theme } from '../../interfaces/ui/style/theme';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type GetConstructorArgs<T> = T extends new (...args: infer U) => any
   ? U
   : never;
@@ -49,7 +48,7 @@ export const Provider: FC<
   );
 };
 
-const allowTracking = async () => true;
+const allowTracking = () => Promise.resolve(true);
 
 const fetchPlausibleOptions = async () => {
   const res = await fetch('/api/plausible-options');
@@ -85,7 +84,7 @@ const useTracker = () => {
       }
 
       cleanup = plausible.default(plausibleOptions).enableAutoPageviews();
-    })();
+    })().catch(console.error);
 
     return () => {
       destructed = true;
@@ -98,7 +97,10 @@ export const MyApp = ({ Component, pageProps }: AppProps) => {
   useTracker();
 
   return (
-    <Provider dehydratedState={pageProps.dehydratedState}>
+    <Provider
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+      dehydratedState={pageProps.dehydratedState}
+    >
       <Component {...pageProps} />
     </Provider>
   );

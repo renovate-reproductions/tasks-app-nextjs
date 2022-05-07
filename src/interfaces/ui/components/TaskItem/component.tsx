@@ -11,19 +11,25 @@ type Props = {
   onClickDelete(): void;
 } & ContainerProps;
 
-export const View: React.FC<Props> = (props) => {
-  const id = `item_${props.id}`;
+export const View: React.FC<Props> = ({
+  id,
+  title,
+  done,
+  onChangeDone,
+  onClickDelete,
+}) => {
+  const htmlId = `item_${id}`;
 
   return (
     <Styled.LI>
       <Styled.Input
         type="checkbox"
-        id={id}
-        checked={props.done}
-        onChange={props.onChangeDone}
+        id={htmlId}
+        checked={done}
+        onChange={onChangeDone}
       />
-      <Styled.Label htmlFor={id}>{props.title}</Styled.Label>
-      <Styled.Button type="button" onClick={props.onClickDelete}>
+      <Styled.Label htmlFor={htmlId}>{title}</Styled.Label>
+      <Styled.Button type="button" onClick={onClickDelete}>
         Delete
       </Styled.Button>
     </Styled.LI>

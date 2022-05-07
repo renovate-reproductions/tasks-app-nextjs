@@ -19,7 +19,7 @@ const renderComponent = (props?: Partial<ComponentProps<typeof View>>) => {
   return render(<View {...defaultProps} {...props} />, { wrapper: Provider });
 };
 
-it('Render title', async () => {
+it('Render title', () => {
   renderComponent({ title: 'dummy_title' });
   expect(screen.getByText('dummy_title')).toBeInTheDocument();
 });

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { pagesPath } from '../lib/$path';
+import { pagesPath } from '../../lib/$path';
 
 const Height = () => (
   <ul>

@@ -25,9 +25,7 @@ export const useChangeDoneHandler = (id: number, title: string) => {
           ) ?? [],
       );
     },
-    onSettled: async (_) => {
-      queryClient.invalidateQueries(taskKeys.list());
-    },
+    onSettled: async () => queryClient.invalidateQueries(taskKeys.list()),
     retry: 5,
   });
 
@@ -51,9 +49,7 @@ export const useClickDeleteHandler = (id: number, title: string) => {
         (tasks) => tasks?.filter((task) => task.id !== id) ?? [],
       );
     },
-    onSettled: async () => {
-      queryClient.invalidateQueries(taskKeys.list());
-    },
+    onSettled: async () => queryClient.invalidateQueries(taskKeys.list()),
     retry: 5,
   });
 

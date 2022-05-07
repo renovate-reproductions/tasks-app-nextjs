@@ -1,5 +1,3 @@
-import type { QueryFunctionContext } from 'react-query';
-
 import { CreateTask } from '../../../application/usecases/create-task';
 import { ListTasks } from '../../../application/usecases/list-tasks';
 import { RemoveTask } from '../../../application/usecases/remove-task';
@@ -18,17 +16,17 @@ export const taskKeys = {
     [{ ...taskKeys.all()[0], entity: 'detail', id }] as const,
 };
 
-export const fetchTasks = async (
-  _: QueryFunctionContext<ReturnType<typeof taskKeys['list']>>,
-) => {
-  const res = await new ListTasks(new TaskRepository(api)).execute();
+export const fetchTasks = async () =>
+  // _: QueryFunctionContext<ReturnType<typeof taskKeys['list']>>,
+  {
+    const res = await new ListTasks(new TaskRepository(api)).execute();
 
-  if (!res.success) {
-    throw res.error;
-  }
+    if (!res.success) {
+      throw res.error;
+    }
 
-  return res.data;
-};
+    return res.data;
+  };
 
 export const createTask = async (title: string) => {
   const res = await new CreateTask(new TaskRepository(api)).execute(title);
