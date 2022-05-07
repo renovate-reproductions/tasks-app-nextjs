@@ -6,7 +6,7 @@ import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { ThemeProvider } from 'styled-components';
 
-import { GlobalStyle } from '../../interfaces/ui/style/global';
+import { GlobalStyle } from '../../interfaces/ui/style/GlobalStyle';
 import { theme } from '../../interfaces/ui/style/theme';
 
 type GetConstructorArgs<T> = T extends new (...args: infer U) => any

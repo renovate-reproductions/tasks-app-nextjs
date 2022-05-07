@@ -1,4 +1,4 @@
 export {
   Tasks as default,
   getServerSideProps,
-} from '../infrastructure/controllers/tasks';
+} from '../src/infrastructure/controllers/Tasks';

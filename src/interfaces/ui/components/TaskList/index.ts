@@ -1,1 +1,1 @@
-export { TaskList } from './component';
+export { TaskList } from './TaskList';

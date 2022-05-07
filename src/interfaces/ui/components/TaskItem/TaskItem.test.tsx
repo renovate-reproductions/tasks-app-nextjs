@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import type { ComponentProps } from 'react';
 
 import { Provider } from '../../../../infrastructure/controllers/_app';
-import { View } from './component';
+import { View } from './TaskItem';
 
 const renderComponent = (props?: Partial<ComponentProps<typeof View>>) => {
   const defaultProps = {

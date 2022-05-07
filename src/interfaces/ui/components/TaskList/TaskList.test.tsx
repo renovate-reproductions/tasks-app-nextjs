@@ -5,7 +5,7 @@ import { setupServer } from 'msw/node';
 import { getFetchTasksHandlers, tasks } from '../../../../../msw/handlers';
 import { Provider } from '../../../../infrastructure/controllers/_app';
 import { assert } from '../../../../utils/type';
-import * as stories from './component.stories';
+import * as stories from './TaskList.stories';
 
 const { ClickFirstCheckbox } = composeStories(stories);
 const server = setupServer(getFetchTasksHandlers());

@@ -1,15 +1,24 @@
+import styled from 'styled-components';
+
 import { NewTaskForm } from '../NewTaskForm';
 import { TaskList } from '../TaskList';
-import * as Styled from './style';
 
 export const View: React.FC = () => (
-  <Styled.Main>
+  <Main>
     <h1>Tasks</h1>
     <NewTaskForm />
-    <Styled.DivUListWrapper>
+    <DivUListWrapper>
       <TaskList />
-    </Styled.DivUListWrapper>
-  </Styled.Main>
+    </DivUListWrapper>
+  </Main>
 );
 
 export const Page: React.FC = (props) => <View {...props} />;
+
+const Main = styled.main`
+  padding: 8px 32px;
+`;
+
+const DivUListWrapper = styled.div`
+  padding-top: 16px;
+`;

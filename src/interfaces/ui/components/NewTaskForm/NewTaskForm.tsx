@@ -1,8 +1,8 @@
 import type { ChangeEvent, FormEvent } from 'react';
 import { useCallback, useState } from 'react';
+import styled from 'styled-components';
 
 import { useSubmitHandler } from './hook';
-import * as Styled from './style';
 
 type ContainerProps = {};
 
@@ -13,8 +13,8 @@ type Props = {
 } & ContainerProps;
 
 export const View: React.FC<Props> = ({ value, onChangeText, onSubmit }) => (
-  <Styled.Form onSubmit={onSubmit}>
-    <Styled.Input
+  <Form onSubmit={onSubmit}>
+    <Input
       type="text"
       name="task"
       value={value}
@@ -26,8 +26,8 @@ export const View: React.FC<Props> = ({ value, onChangeText, onSubmit }) => (
       placeholder="Add task"
       aria-label="New task"
     />
-    <Styled.Button type="submit">Add</Styled.Button>
-  </Styled.Form>
+    <Button type="submit">Add</Button>
+  </Form>
 );
 
 export const NewTaskForm: React.FC<ContainerProps> = (props) => {
@@ -52,3 +52,28 @@ export const NewTaskForm: React.FC<ContainerProps> = (props) => {
     />
   );
 };
+
+const Form = styled.form`
+  display: grid;
+  grid-template: 'input . submit' 32px / 1fr 8px max-content;
+  align-items: center;
+  width: 100%;
+
+  & > :nth-child(1) {
+    grid-area: input;
+  }
+
+  & > :nth-child(2) {
+    grid-area: submit;
+  }
+`;
+
+const Input = styled.input`
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 8px;
+`;
+
+const Button = styled.button`
+  height: 32px;
+`;

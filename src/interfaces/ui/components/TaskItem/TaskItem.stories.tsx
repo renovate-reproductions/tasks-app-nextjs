@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { View } from './component';
+import { View } from './TaskItem';
 
 const meta: ComponentMeta<typeof View> = {
   title: 'Component/TaskItem',

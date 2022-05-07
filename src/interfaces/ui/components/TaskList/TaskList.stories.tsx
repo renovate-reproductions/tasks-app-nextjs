@@ -6,7 +6,7 @@ import {
   getFetchTasksErrorHandlers,
   getFetchTasksHandlers,
 } from '../../../../../msw/handlers';
-import { TaskList } from './component';
+import { TaskList } from './TaskList';
 
 const meta: ComponentMeta<typeof TaskList> = {
   title: 'Component/TaskList',
