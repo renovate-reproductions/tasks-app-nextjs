@@ -283,14 +283,8 @@ module.exports = {
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
     'no-invalid-this': 'off',
-    '@typescript-eslint/no-invalid-this': 'off',
     '@typescript-eslint/no-redundant-type-constituents': 'error',
     '@typescript-eslint/no-useless-empty-export': 'error',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-confusing-void-expression': 'off',
-    '@typescript-eslint/no-object-literal-type-assertion': 'off',
-    '@typescript-eslint/no-triple-slash-reference': 'off',
-    '@typescript-eslint/prefer-interface': 'off',
   },
   overrides: [
     {
